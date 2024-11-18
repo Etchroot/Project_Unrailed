@@ -55,12 +55,12 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
     private void OnLoginButtonClick()
     {
-        SetNickNam();
+        //SetNickNam();
         PhotonNetwork.JoinRandomRoom();
     }
     private void OnMakeRoomButtonClick()
     {
-        SetNickNam();
+        //SetNickNam();
         if (string.IsNullOrEmpty(roomNameIF.text))
         {
             roomNameIF.text = $"ROOM_{Random.Range(0, 1000)}";
@@ -110,7 +110,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.IsMasterClient)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("GameScene");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("1_Game");
         }
     }
     #endregion
