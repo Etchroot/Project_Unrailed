@@ -31,7 +31,7 @@ public class GatherResource : MonoBehaviour
     private void Update()
     {
         if (ismaking != null) return;
-        if (numofwoodlog >= 1 && numofstone >= 1)
+        if (numofwoodlog >= spendofwood && numofstone >= spendofstone)
         {
             ismaking = StartCoroutine(MakeRailroad());
         }
@@ -42,6 +42,20 @@ public class GatherResource : MonoBehaviour
         yield return new WaitForSeconds(2);
         numofwoodlog -= spendofwood;
         numofstone -= spendofstone;
-        stackRailroad.addRail();
+        //stackRailroad.addRail();  TODO rail staking make
+        Debug.Log($" add one rail , remain wood {numofwoodlog} , remain stone {numofstone}");
+        ismaking = null;
+    }
+
+    public void addwood()  // TODO Test Codes
+    {
+        numofwoodlog += 3;
+        Debug.Log($" add woodLog , remain wood {numofwoodlog} , remain stone {numofstone}");
+    }
+
+    public void addstone()
+    {
+        numofstone += 2;
+        Debug.Log($" add stone , remain wood {numofwoodlog} , remain stone {numofstone}");
     }
 }

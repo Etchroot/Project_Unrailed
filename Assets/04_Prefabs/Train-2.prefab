@@ -46,6 +46,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3fa95253247beb488e2540c08be78de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  countofwood: 3
+  countofstone: 2
+  spendofwood: 1
+  spendofstone: 1
 --- !u!65 &6319257624664839799
 BoxCollider:
   m_ObjectHideFlags: 0
