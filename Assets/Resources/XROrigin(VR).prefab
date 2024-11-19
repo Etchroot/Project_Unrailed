@@ -807,8 +807,9 @@ GameObject:
   - component: {fileID: 8431460374446006923}
   - component: {fileID: 7805404772629801124}
   - component: {fileID: 1469936774250297930}
+  - component: {fileID: 839157813239169455}
   m_Layer: 0
-  m_Name: XR Origin (VR)
+  m_Name: XROrigin(VR)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -915,6 +916,33 @@ MonoBehaviour:
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
+--- !u!114 &839157813239169455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9129489394975904039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0046af8ec2f8044fa117828021c873a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 1099291078441040995}
+  audioListener: {fileID: 142664035870515898}
+  trackedPoseDriver:
+  - {fileID: 5203890013291138020}
+  - {fileID: 6738486048653519881}
+  - {fileID: 8593993495084731155}
+  photonView: {fileID: 1469936774250297930}
+  nearfarinteractor:
+  - {fileID: 4000784697219427017}
+  - {fileID: 7966685622551285015}
+  inputActionManager:
+  - {fileID: 8431460374446006923}
+  cinputActionManager:
+  - {fileID: 3562890367745395652}
+  - {fileID: 6301519777332845984}
 --- !u!1001 &1617737595489312166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1134,6 +1162,11 @@ PrefabInstance:
 --- !u!4 &7177937189961627845 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5745700813747042508, guid: 3df3e1220f2164f448701a6de8084f92, type: 3}
+  m_PrefabInstance: {fileID: 3180090726569132041}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7966685622551285015 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4804964734930210078, guid: 3df3e1220f2164f448701a6de8084f92, type: 3}
   m_PrefabInstance: {fileID: 3180090726569132041}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3230953293739852646

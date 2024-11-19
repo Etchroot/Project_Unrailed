@@ -7,9 +7,11 @@ public class Rail : MonoBehaviour
 {
     StackRailroad train;
     XRGrabInteractable xRGrabInteractable;
+    Rigidbody rig;
     private void Awake()
     {
         xRGrabInteractable = GetComponent<XRGrabInteractable>();
+        rig = GetComponent<Rigidbody>();
     }
     private void Start()
     {
@@ -28,5 +30,6 @@ public class Rail : MonoBehaviour
     public void Grabed()
     {
         train.TakeRail(this.gameObject);
+        rig.constraints = RigidbodyConstraints.None;
     }
 }
