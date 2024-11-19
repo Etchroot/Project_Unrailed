@@ -11,7 +11,7 @@ public class GatherResource : MonoBehaviour
     int numofwoodlog = 0;
     int numofstone = 0;
     Coroutine ismaking = null;
-    StackRailroad stackRailroad;
+    [SerializeField] StackRailroad stackRailroad;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Tree"))
@@ -42,7 +42,7 @@ public class GatherResource : MonoBehaviour
         yield return new WaitForSeconds(2);
         numofwoodlog -= spendofwood;
         numofstone -= spendofstone;
-        //stackRailroad.addRail();  TODO rail staking make
+        stackRailroad.AddRail(); // TODO rail staking make
         Debug.Log($" add one rail , remain wood {numofwoodlog} , remain stone {numofstone}");
         ismaking = null;
     }

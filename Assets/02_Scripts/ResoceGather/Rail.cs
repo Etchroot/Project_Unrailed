@@ -1,18 +1,32 @@
+using System;
+using UnityEditor;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class Rail : MonoBehaviour
 {
-    bool isSkining = true;
-
-    private void OnCollisionEnter(Collision other)
+    StackRailroad train;
+    XRGrabInteractable xRGrabInteractable;
+    private void Awake()
     {
-        isSkining = false;
-        Destroy(this);
+        xRGrabInteractable = GetComponent<XRGrabInteractable>();
     }
-    private void Update()
+    private void Start()
     {
-        if (!isSkining) return;
-        this.transform.Translate(Vector3.down * 0.5f * Time.deltaTime);
+
+        xRGrabInteractable.selectEntered.AddListener((param1) =>
+        {
+            Grabed();
+
+        });
+    }
+    public void Train(StackRailroad stackRailroad)
+    {
+        train = stackRailroad;
     }
 
+    public void Grabed()
+    {
+        train.TakeRail(this.gameObject);
+    }
 }

@@ -5,5 +5,5 @@ using UnityEngine.XR.Interaction.Toolkit.Interactors;
 
 public class App : Singleton<App>
 {
-    internal NearFarInteractor rightnearFarInteractor;
+    public NearFarInteractor rightnearFarInteractor;
 }
