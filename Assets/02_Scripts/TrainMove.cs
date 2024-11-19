@@ -9,6 +9,8 @@ public class TrainMove : MonoBehaviour
     [SerializeField] GameObject TrainHead;
     [SerializeField] GameObject CraftingBox;
     [SerializeField] GameObject Storage;
+    public Action endaction;
+    private bool endbool;
 
 
 
@@ -16,27 +18,37 @@ public class TrainMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        endaction += () =>
+        {
+            endbool = false;
+        };
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (endbool) return;
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
+            Debug.Log("앞 방향키");
             MoveForward moveForward = Train1.GetComponent<MoveForward>();
-            moveForward.GoForward();
+            endbool = true;
+            moveForward.GoForward(endaction);
         }
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
+            Debug.Log("좌 방향키");
             MoveLeft moveLeft = Train1.GetComponent<MoveLeft>();
-            moveLeft.GoLeft();
+            endbool = true;
+            moveLeft.GoLeft(endaction);
             //moveL.GoLeft();
         }
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
+            Debug.Log("우 방향키");
             MoveRight moveRight = Train1.GetComponent<MoveRight>();
-            moveRight.GoRight();
+            endbool = true;
+            moveRight.GoRight(endaction);
             //moveR.GoRight();
         }
 
