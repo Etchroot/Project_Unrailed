@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
+using UnityEngine.XR.OpenXR.NativeTypes;
+using UnityEngine.XR;
 
 public class InstallRail : MonoBehaviour
 {
@@ -31,8 +33,13 @@ public class InstallRail : MonoBehaviour
         }
     }
 
-    private void selectRail()
+    public void selectRail()
     {
-        throw new NotImplementedException();
+
+    }
+
+    public void selectUI()
+    {
+
     }
 }

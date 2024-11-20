@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Tree
   - Rock
+  - EMPTY
+  - INSTALL
   layers:
   - Default
   - TransparentFX
