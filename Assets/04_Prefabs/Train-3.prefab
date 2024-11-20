@@ -40,8 +40,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4775539426459617878}
-  - component: {fileID: 7412223016549800804}
-  - component: {fileID: 4979752043604411087}
+  - component: {fileID: 233140362229179353}
+  - component: {fileID: -4363321983484389883}
+  - component: {fileID: 6749155243253215869}
+  - component: {fileID: -5806295147630082761}
   m_Layer: 0
   m_Name: Train-3
   m_TagString: Untagged
@@ -66,7 +68,7 @@ Transform:
   - {fileID: 2436730138878208169}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7412223016549800804
+--- !u!114 &233140362229179353
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -75,32 +77,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 6746710240226383061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a26a6d42eb6495458d07878dab76c71, type: 3}
+  m_Script: {fileID: 11500000, guid: 28e9f736cfb352744a74645e630a87ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  railroad: {fileID: 2161973664557369212, guid: 52e0a885d2f0dcb438dcd5cf89db8276, type: 3}
-  targetposition: {fileID: 2436730138878208169}
---- !u!65 &4979752043604411087
-BoxCollider:
+  TrainHead: {fileID: 0}
+  CraftingBox: {fileID: 0}
+  Storage: {fileID: 0}
+  Train1: {fileID: 0}
+--- !u!114 &-4363321983484389883
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6746710240226383061}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
   m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.2604477, y: 0.4581256, z: 5.782633}
-  m_Center: {x: -0.017669797, y: 3.1687891, z: -0.16491842}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28d64188d9fcf4c48bdf2f6885e66f76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrainSpeed: 1
+--- !u!114 &6749155243253215869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6746710240226383061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab230397ec732204e9a3d894e362fbc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3
+--- !u!114 &-5806295147630082761
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6746710240226383061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99c75b41635a5fc42bf93ab81cf3d056, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 3
 --- !u!1001 &5348223899063087924
 PrefabInstance:
   m_ObjectHideFlags: 0
