@@ -24,7 +24,7 @@ public class MoveLeft : MonoBehaviour
         isCoroutineRunning = true;
 
         StartCoroutine(RotateTrain());
-        Debug.Log("좌회전 코루틴 시작");
+        //Debug.Log("좌회전 코루틴 시작");
 
         float time = 0f;
         Vector3 t1, t2, t3;
@@ -67,13 +67,13 @@ public class MoveLeft : MonoBehaviour
 
         // }
         //transform.position = localTargetPoint;
-        Debug.Log("목표 위치 도달");
+        //Debug.Log("목표 위치 도달");
         isCoroutineRunning = false;
         action.Invoke();
     }
     IEnumerator RotateTrain()
     {
-        Debug.Log("회전 코루틴 시작");
+        //Debug.Log("회전 코루틴 시작");
         float elapsedtime = 0f;
         Quaternion startRotation = transform.rotation;
         Quaternion endRotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y - 90, 0); //왼쪽 90도  
@@ -85,7 +85,7 @@ public class MoveLeft : MonoBehaviour
             yield return null;
         }
         transform.rotation = endRotation;
-        Debug.Log("회전 완료");
+        //Debug.Log("회전 완료");
     }
     // IEnumerator TraingoForward()
     // {

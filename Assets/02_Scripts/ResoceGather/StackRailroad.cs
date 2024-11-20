@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Photon.Pun;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -18,7 +19,8 @@ public class StackRailroad : MonoBehaviour
         {
             targetposition.position += stackposition;
         }
-        GameObject rail = Instantiate(railroad, targetposition.position, Quaternion.identity, transform);
+        GameObject rail = PhotonNetwork.Instantiate("RailRoad", targetposition.position, Quaternion.identity);
+        rail.transform.parent = transform;
         rail.GetComponent<Rail>().Train(this);
         rail.name = railroad.name + numofrails++;
 

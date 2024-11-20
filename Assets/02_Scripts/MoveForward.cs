@@ -23,7 +23,7 @@ public class MoveForward : MonoBehaviour
     IEnumerator TrainForward(Action action)
     {
 
-        Debug.Log("전진 시작");
+        //Debug.Log("전진 시작");
         yield return new WaitUntil(() => !isCoroutineRunning); // 기존 코루틴 끝날때까지 대기
         //Vector3 destination = new Vector3(transform.position.x, transform.position.y, transform.position.z + 6);
         isCoroutineRunning = true;
@@ -35,7 +35,7 @@ public class MoveForward : MonoBehaviour
             yield return null;
         }
         transform.position = destination;
-        Debug.Log("목표 위치 도달");
+        //Debug.Log("목표 위치 도달");
         isCoroutineRunning = false;
         action.Invoke();
     }

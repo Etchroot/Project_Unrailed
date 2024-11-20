@@ -11,48 +11,89 @@ public class TrainMove : MonoBehaviour
     [SerializeField] GameObject Storage;
     public Action endaction;
     private bool endbool;
+    MoveForward moveForward;
+    MoveLeft moveLeft;
+    MoveRight moveRight;
+    [SerializeField] int numoftrain;
+    Coroutine pathfollowing;
 
 
 
     public GameObject Train1;
+    private void Awake()
+    {
+        moveForward = GetComponent<MoveForward>();
+        moveLeft = GetComponent<MoveLeft>();
+        moveRight = GetComponent<MoveRight>();
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         endaction += () =>
         {
             endbool = false;
+            numoftrain++;
         };
+        pathfollowing = StartCoroutine(TrainStart());
+
     }
+
+    private IEnumerator TrainStart()
+    {
+        while (true)
+        {
+            yield return null;
+            if (!endbool)
+            {
+                endbool = true;
+                if (App.Instance.pathofRails.Count == numoftrain)
+                {
+                    //Debug.Log($" waring end of rail");
+                    StopCoroutine(pathfollowing);
+                    break;
+                }
+                int k = App.Instance.pathofRails[numoftrain];
+                switch (k)
+                {
+                    case 0:
+                        moveForward.GoForward(endaction);
+                        break;
+                    case 1:
+                        moveLeft.GoLeft(endaction);
+                        break;
+                    case 2:
+                        moveRight.GoRight(endaction);
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+        Debug.Log($" path follow is end");
+    }
+
 
     // Update is called once per frame
-    void Update()
-    {
-        if (endbool) return;
-        if (Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            Debug.Log("앞 방향키");
-            MoveForward moveForward = Train1.GetComponent<MoveForward>();
-            endbool = true;
-            moveForward.GoForward(endaction);
-        }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Debug.Log("좌 방향키");
-            MoveLeft moveLeft = Train1.GetComponent<MoveLeft>();
-            endbool = true;
-            moveLeft.GoLeft(endaction);
-            //moveL.GoLeft();
-        }
-        if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            Debug.Log("우 방향키");
-            MoveRight moveRight = Train1.GetComponent<MoveRight>();
-            endbool = true;
-            moveRight.GoRight(endaction);
-            //moveR.GoRight();
-        }
+    // void Update()
+    // {
+    //     if (endbool) return;
+    //     if (Input.GetKeyDown(KeyCode.UpArrow))
+    //     {
+    //         endbool = true;
+    //         moveForward.GoForward(endaction);
+    //     }
+    //     if (Input.GetKeyDown(KeyCode.LeftArrow))
+    //     {
+    //         endbool = true;
+    //         moveLeft.GoLeft(endaction);
+    //     }
+    //     if (Input.GetKeyDown(KeyCode.RightArrow))
+    //     {
+    //         endbool = true;
+    //         moveRight.GoRight(endaction);
+    //     }
 
-    }
+    // }
 
     // private bool isCoroutineRunning = false; // 코루틴이 실행중인지 확인하는 변수
     // // IEnumerator TrainForward()
