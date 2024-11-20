@@ -42,7 +42,7 @@ public class GatherResource : MonoBehaviour
         yield return new WaitForSeconds(2);
         numofwoodlog -= spendofwood;
         numofstone -= spendofstone;
-        stackRailroad.AddRail(); // TODO rail staking make
+        stackRailroad.AddRail(); 
         Debug.Log($" add one rail , remain wood {numofwoodlog} , remain stone {numofstone}");
         ismaking = null;
     }
