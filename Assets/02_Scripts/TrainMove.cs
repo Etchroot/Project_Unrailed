@@ -33,9 +33,35 @@ public class TrainMove : MonoBehaviour
         {
             endbool = false;
             numoftrain++;
+            TrainGo();
         };
-        pathfollowing = StartCoroutine(TrainStart());
+        App.Instance.traingo += TrainGo;
+        //pathfollowing = StartCoroutine(TrainStart());    
 
+    }
+
+    void TrainGo()
+    {
+        if (App.Instance.pathofRails.Count == numoftrain)
+        {
+            Debug.Log($" waring end of rail");
+            return;
+        }
+        int k = App.Instance.pathofRails[numoftrain];
+        switch (k)
+        {
+            case 0:
+                moveForward.GoForward(endaction);
+                break;
+            case 1:
+                moveLeft.GoLeft(endaction);
+                break;
+            case 2:
+                moveRight.GoRight(endaction);
+                break;
+            default:
+                break;
+        }
     }
 
     private IEnumerator TrainStart()
