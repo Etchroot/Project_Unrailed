@@ -54,7 +54,7 @@ public class SelectRail : MonoBehaviour
     {
         isdelay = true;
         // 이전 선택된 버튼 색상 초기화
-        buttons[currentIndex].GetComponentInChildren<TextMeshProUGUI>().color = Color.white;
+        buttons[currentIndex].GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
         // 인덱스 업데이트, 범위 제한
         currentIndex = Mathf.Clamp(currentIndex + direction, 0, buttons.Length - 1);
         // 새로운 선택된 버튼 색상 변경
