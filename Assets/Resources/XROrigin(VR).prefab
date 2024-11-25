@@ -320,7 +320,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 15728695
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -555,7 +555,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Mediator: {fileID: 7564042441301243356}
   m_TransformationPriority: 0
-  m_MoveSpeed: 1
+  m_MoveSpeed: 3
   m_EnableStrafe: 0
   m_EnableFly: 0
   m_UseGravity: 1
@@ -3862,7 +3862,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 4921417314378450343}
   - {fileID: 6386537643887006162}
-  - {fileID: 0}
+  - {fileID: 2751877007032580530}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0

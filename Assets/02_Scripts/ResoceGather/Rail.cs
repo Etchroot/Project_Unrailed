@@ -1,6 +1,7 @@
 using System;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
 
 public class Rail : MonoBehaviour
@@ -18,10 +19,18 @@ public class Rail : MonoBehaviour
 
         xRGrabInteractable.selectEntered.AddListener((param1) =>
         {
-            Grabed();
+            Grabed(param1);
 
         });
     }
+
+    private void Grabed(SelectEnterEventArgs param1)
+    {
+        Debug.Log(param1);
+
+        Grabed();
+    }
+
     public void Train(StackRailroad stackRailroad)
     {
         train = stackRailroad;
@@ -31,5 +40,6 @@ public class Rail : MonoBehaviour
     {
         train.TakeRail(this.gameObject);
         rig.constraints = RigidbodyConstraints.None;
+        this.gameObject.transform.parent = null;
     }
 }

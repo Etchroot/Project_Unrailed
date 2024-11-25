@@ -108,8 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   countofwood: 3
   countofstone: 2
-  spendofwood: 3
-  spendofstone: 2
+  spendofwood: 1
+  spendofstone: 1
   stackRailroad: {fileID: 0}
 --- !u!65 &1639423636180685681
 BoxCollider:
@@ -126,12 +126,12 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 12582912
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.492713, y: 1.7429786, z: 5.0402884}
-  m_Center: {x: -0.019905567, y: 3.9377835, z: -0.069660425}
+  m_Size: {x: 4, y: 1.7429786, z: 5.0402884}
+  m_Center: {x: 0, y: 3.9377835, z: -0.069660425}
 --- !u!1001 &6011665124017864218
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -162,7 +162,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ad5de56b87e7294888b9658f9c55854, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.16
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 7ad5de56b87e7294888b9658f9c55854, type: 3}
       propertyPath: m_LocalRotation.w
