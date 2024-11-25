@@ -11,6 +11,7 @@ public class trainRod : MonoBehaviour
     public void Doit()
     {
         anim.SetTrigger("Doit");
+        App.Instance.traingo.Invoke();
     }
 
 }
