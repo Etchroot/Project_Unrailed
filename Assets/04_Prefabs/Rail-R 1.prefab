@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: -2843051770099524985}
   m_Layer: 0
   m_Name: Rail-R 1
-  m_TagString: RAIL
+  m_TagString: Rail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

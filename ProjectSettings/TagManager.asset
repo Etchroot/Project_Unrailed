@@ -9,6 +9,7 @@ TagManager:
   - EMPTY
   - INSTALL
   - Lever
+  - Rail
   layers:
   - Default
   - TransparentFX
