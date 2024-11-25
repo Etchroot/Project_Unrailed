@@ -37,11 +37,11 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - C2_House
+  - C2_Tree
+  - C2_Rock
+  - C2_Train
+  - C2_Destination
   m_SortingLayers:
   - name: Default
     uniqueID: 0
