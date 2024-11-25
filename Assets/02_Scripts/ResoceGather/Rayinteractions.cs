@@ -13,13 +13,10 @@ public class RayInteractorMaterialChange : MonoBehaviour
         EditorApplication.Beep();
     }
 
-    private void Awake() {
-        nearFarInteractor = App.Instance.rightnearFarInteractor;
-    }
-
     // Ray가 물체를 가리키고 있는지 체크하는 함수
     private void Start()
     {
+        nearFarInteractor = App.Instance.rightnearFarInteractor;
         nearFarInteractor.selectEntered.AddListener((param1) =>
         {
             foreach (var item in param1.interactableObject.colliders)
@@ -31,6 +28,10 @@ public class RayInteractorMaterialChange : MonoBehaviour
                 if (item.CompareTag("Rock"))
                 {
                     item.gameObject.GetComponent<MakeRock>()?.Doit(1);
+                }
+                if (item.CompareTag("Lever"))
+                {
+                    item.gameObject.GetComponent<trainRod>()?.Doit();
                 }
             }
             EditorApplication.Beep();

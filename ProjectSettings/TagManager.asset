@@ -8,7 +8,7 @@ TagManager:
   - Rock
   - EMPTY
   - INSTALL
-  - RAIL
+  - Lever
   layers:
   - Default
   - TransparentFX
