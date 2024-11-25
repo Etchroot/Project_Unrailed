@@ -116,13 +116,165 @@ public class RaytoTile_N_InstantRail : MonoBehaviour
     {
         if (selectedRailIndex >= 0 && selectedRailIndex < railPrefabs.Length && railPrefabs[selectedRailIndex] != null)
         {
-            Instantiate(railPrefabs[selectedRailIndex], position, Quaternion.identity);
-            tile.tag = "INSTALL"; // 타일 상태를 INSTALL로 변경
-            Debug.Log($"레일 {selectedRailIndex} 설치 완료.");
+            WASDPlaceRail(tile, position);
+            //Instantiate(railPrefabs[selectedRailIndex], position, Quaternion.identity);
+            //tile.tag = "INSTALL"; // 타일 상태를 INSTALL로 변경
+            //Debug.Log($"레일 {selectedRailIndex} 설치 완료.");
         }
         else
         {
             Debug.Log("선택된 레일 프리팹이 존재하지 않음");
         }
     }
+
+    #region 레일 연속성 판단
+    private void WASDPlaceRail(GameObject tile, Vector3 position)
+    {
+        // 주변 타일을 감지할 때 사용할 Collider 배열
+        Collider[] nearbyColliders = Physics.OverlapSphere(position, 6.1f);
+
+        // 각 방향에 대한 레일 설치 여부 변수
+        bool hasRailUp = false;    // 위에 레일이 있는지 여부
+        bool hasRailDown = false;  // 아래에 레일이 있는지 여부
+        bool hasRailLeft = false;  // 왼쪽에 레일이 있는지 여부
+        bool hasRailRight = false; // 오른쪽에 레일이 있는지 여부
+
+        // 주변 타일들 중 레일이 설치되어 있는지 확인
+        foreach (var collider in nearbyColliders)
+        {
+            if (collider.CompareTag("RAIL")) // 레일인 타일만 체크
+            {
+                Vector3 direction = collider.transform.position - position;
+                Debug.Log($"{direction}");
+                // 위쪽에 레일이 있으면
+                if (direction.z > 0)
+                    hasRailUp = true;
+
+                // 아래쪽에 레일이 있으면
+                else if (direction.z < 0)
+                    hasRailDown = true;
+
+                // 왼쪽에 레일이 있으면
+                else if (direction.x < 0)
+                    hasRailLeft = true;
+
+                // 오른쪽에 레일이 있으면
+                else if (direction.x > 0)
+                    hasRailRight = true;
+            }
+            Debug.Log($"{hasRailUp} + {hasRailDown} + {hasRailLeft} + {hasRailRight}");
+        }
+
+        // 레일을 설치할 조건 설정
+        //int railToPlace = -1;  // 설치할 레일 타입을 결정할 변수
+
+        switch (selectedRailIndex)
+        {
+
+            case 0:
+                Debug.Log("0으로 서치중");
+                if (hasRailUp || hasRailDown)
+                {
+                    Instantiate(railPrefabs[0], position, Quaternion.identity);
+                    App.Instance.pathofRails.Add(0);
+                    tile.tag = "INSTALL";
+                }
+                else if (hasRailLeft || hasRailRight)
+                {
+                    Instantiate(railPrefabs[0], position, Quaternion.Euler(0f, 90f, 0f));
+                    App.Instance.pathofRails.Add(0);
+                    tile.tag = "INSTALL";
+                }
+                break;
+            case 1:
+                if (hasRailDown)
+                {
+                    Instantiate(railPrefabs[1], position, Quaternion.identity);
+                    App.Instance.pathofRails.Add(1);
+                    tile.tag = "INSTALL";
+                }
+                else if (hasRailLeft)
+                {
+                    Instantiate(railPrefabs[1], position, Quaternion.Euler(0f, 90f, 0f));
+                    App.Instance.pathofRails.Add(1);
+                    tile.tag = "INSTALL";
+                }
+                else if (hasRailUp)
+                {
+                    Instantiate(railPrefabs[1], position, Quaternion.Euler(0f, 180f, 0f));
+                    App.Instance.pathofRails.Add(1);
+                    tile.tag = "INSTALL";
+                }
+                else if (hasRailRight)
+                {
+                    Instantiate(railPrefabs[1], position, Quaternion.Euler(0f, 270f, 0f));
+                    App.Instance.pathofRails.Add(1);
+                    tile.tag = "INSTALL";
+                }
+                break;
+            case 2:
+                if (hasRailDown)
+                {
+                    Instantiate(railPrefabs[2], position, Quaternion.identity);
+                    App.Instance.pathofRails.Add(2);
+                    tile.tag = "INSTALL";
+                }
+                else if (hasRailLeft)
+                {
+                    Instantiate(railPrefabs[2], position, Quaternion.Euler(0f, 90f, 0f));
+                    App.Instance.pathofRails.Add(2);
+                    tile.tag = "INSTALL";
+                }
+                else if (hasRailUp)
+                {
+                    Instantiate(railPrefabs[2], position, Quaternion.Euler(0f, 180f, 0f));
+                    App.Instance.pathofRails.Add(2);
+                    tile.tag = "INSTALL";
+                }
+                else if (hasRailRight)
+                {
+                    Instantiate(railPrefabs[2], position, Quaternion.Euler(0f, 270f, 0f));
+                    App.Instance.pathofRails.Add(2);
+                    tile.tag = "INSTALL";
+                }
+                break;
+            default:
+                Debug.Log("주변 레일을 감지하지 못해 레일을 설치하지 않음");
+                break;
+
+        }
+    }
+    // 각 방향에 따라 설치할 레일 종류 결정
+    // if (hasRailUp || hasRailDown) // 위나 아래에 레일이 있으면 상하 레일
+    // {
+    //     railToPlace = 2; // 2번 레일 (상하 직선)
+    // }
+    // else if (hasRailLeft || hasRailRight) // 왼쪽이나 오른쪽에 레일이 있으면 좌우 레일
+    // {
+    //     railToPlace = 3; // 3번 레일 (좌우 직선)
+    // }
+
+    // 선택된 레일을 설치
+    //     if (railToPlace != -1)
+    //     {
+    //         if (railToPlace == 4)  // 가로 레일은 1번 레일을 90도 회전시켜 설치
+    //         {
+    //             Instantiate(railPrefabs[0], position, Quaternion.Euler(0f, 90f, 0f));  // 1번 레일 회전
+    //             Debug.Log("가로 레일(4번) 설치 완료");
+    //         }
+    //         else
+    //         {
+    //             Instantiate(railPrefabs[railToPlace], position, Quaternion.identity);
+    //             Debug.Log($"레일 {railToPlace} 설치 완료");
+    //         }
+
+    //         tile.tag = "INSTALL"; // 타일 상태 변경
+    //     }
+    //     else
+    //     {
+    //         Debug.Log("주변 레일을 감지하지 못해 레일을 설치하지 않음");
+    //     }
+    // }
+
+    #endregion
 }
