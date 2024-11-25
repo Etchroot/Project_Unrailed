@@ -1037,7 +1037,7 @@ MonoBehaviour:
   - {fileID: 4921417314378450343}
   - {fileID: 6386537643887006162}
   - {fileID: 9184919477613531373}
-  sceneViewId: 0
+  sceneViewId: 1
   InstantiationId: 0
   isRuntimeInstantiated: 0
 --- !u!114 &839157813239169455
@@ -1429,7 +1429,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: LittleGhost_LP (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5446477390807014375, guid: b713585f24f940f4eadb10319818ef40, type: 3}
+    - {fileID: 5446477390807014372, guid: b713585f24f940f4eadb10319818ef40, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
