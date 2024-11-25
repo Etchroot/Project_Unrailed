@@ -12,6 +12,7 @@ public class InstantiateRail : MonoBehaviour
     void Start()
     {
     }
+
     public void SetRail(Vector3 target)
     {
         for (int i = 0; i < railbuttons.Length; i++)
@@ -19,7 +20,12 @@ public class InstantiateRail : MonoBehaviour
             int index = i; // Lambda 캡쳐문제 방지
             if (railbuttons != null)
             {
+                Debug.Log("set rail 도달");
                 railbuttons[i].onClick.AddListener(() => instantRailPrefab(index, target));
+            }
+            else
+            {
+                Debug.Log("set rail 도달 실패");
             }
         }
     }
@@ -27,6 +33,7 @@ public class InstantiateRail : MonoBehaviour
     {
         if (railPrefab != null && index < railPrefab.Length && railPrefab[index] != null)
         {
+            Debug.Log("프리펩 생성 도달");
             Instantiate(railPrefab[index], target, Quaternion.identity);
 
         }

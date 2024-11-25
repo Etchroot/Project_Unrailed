@@ -42,15 +42,18 @@ public class RaytoTile : MonoBehaviour
 
             if (Physics.Raycast(ray, out hitinfo, rayLength))
             {
-                if (hitinfo.collider.tag == "EMPTY")
+                Debug.Log($"{hitinfo.collider.gameObject.tag}");
+                if (hitinfo.collider.CompareTag("EMPTY"))
                 {
-                    Vector3 hitposition = hitinfo.point;
-                    instantiateRail.SetRail(hitposition);
+                    Debug.Log("empty타일");
+                    Vector3 hitposition = hitinfo.collider.bounds.center;
                     hitinfo.collider.gameObject.tag = "INSTALL";
+                    instantiateRail.SetRail(hitposition);
                 }
                 else
                 {
                     Debug.Log("설치할 수 없는 타일입니다.");
+                    // Debug.Log($"{hitinfo.collider.gameObject.tag}");
                 }
             }
         }
