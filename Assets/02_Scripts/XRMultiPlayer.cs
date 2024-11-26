@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.InputSystem.XR;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using UnityEngine.XR.Interaction.Toolkit.Interactors;
+using UnityEngine.XR.Interaction.Toolkit.Locomotion;
 using UnityEngine.XR.Interaction.Toolkit.Samples.StarterAssets;
 
 public class XRMultiPlayer : MonoBehaviourPunCallbacks
@@ -15,11 +16,12 @@ public class XRMultiPlayer : MonoBehaviourPunCallbacks
     NearFarInteractor[] nearfarinteractor;
     InputActionManager[] inputActionManager;
     ControllerInputActionManager[] cinputActionManager;
+    LocomotionMediator locomotionMediator;
 
-    public override void OnJoinedRoom()
+    private void OnEnable()
     {
-        base.OnJoinedRoom();
-        
+
+
         if (!photonView.IsMine)
         {
             camera.enabled = false;
@@ -28,6 +30,7 @@ public class XRMultiPlayer : MonoBehaviourPunCallbacks
             nearfarinteractor = GetComponentsInChildren<NearFarInteractor>();
             inputActionManager = GetComponentsInChildren<InputActionManager>();
             cinputActionManager = GetComponentsInChildren<ControllerInputActionManager>();
+            locomotionMediator = GetComponentInChildren<LocomotionMediator>();
             foreach (var item in trackedPoseDriver)
             {
                 Destroy(item);
@@ -44,6 +47,7 @@ public class XRMultiPlayer : MonoBehaviourPunCallbacks
             {
                 Destroy(item);
             }
+            Destroy(locomotionMediator);
         }
     }
 }
