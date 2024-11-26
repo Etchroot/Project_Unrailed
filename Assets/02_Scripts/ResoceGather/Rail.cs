@@ -27,7 +27,6 @@ public class Rail : MonoBehaviour
     private void Grabed(SelectEnterEventArgs param1)
     {
         Debug.Log(param1);
-
         Grabed();
     }
 
@@ -40,6 +39,7 @@ public class Rail : MonoBehaviour
     {
         train.TakeRail(this.gameObject);
         rig.constraints = RigidbodyConstraints.None;
+        App.Instance.isgrabedrail = true;
         this.gameObject.transform.parent = null;
     }
 }
