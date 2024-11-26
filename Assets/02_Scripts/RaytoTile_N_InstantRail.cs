@@ -22,19 +22,19 @@ public class RaytoTile_N_InstantRail : MonoBehaviour
     void OnEnable()
     {
         // triggerAction이 활성화될 때 이벤트 등록
-        triggerAction.action.performed += OnTriggerActivated;
+        triggerAction.action.performed += TryPlaceRail;
     }
 
     void OnDisable()
     {
         // triggerAction 비활성화 시 이벤트 해제
-        triggerAction.action.performed -= OnTriggerActivated;
+        triggerAction.action.performed -= TryPlaceRail;
     }
 
     void Update()
     {
         // 트리거 버튼 입력에 따라 레일 설치 시도
-        TryPlaceRail();
+        //TryPlaceRail();
     }
 
     /// <summary>
@@ -43,7 +43,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviour
     private void OnTriggerActivated(InputAction.CallbackContext context)
     {
         Debug.Log("Trigger activated. Updating button listeners.");
-        UpdateButtonListeners();
+        //UpdateButtonListeners();
     }
 
     /// <summary>
@@ -61,19 +61,19 @@ public class RaytoTile_N_InstantRail : MonoBehaviour
     /// <summary>
     /// 버튼 리스너를 업데이트
     /// </summary>
-    private void UpdateButtonListeners()
-    {
-        // 기존 리스너 제거
-        foreach (var button in railButtons)
-        {
-            if (button != null)
-                button.onClick.RemoveAllListeners();
-        }
+    // private void UpdateButtonListeners()
+    // {
+    //     // 기존 리스너 제거
+    //     // foreach (var button in railButtons)
+    //     // {
+    //     //     if (button != null)
+    //     //         button.onClick.RemoveAllListeners();
+    //     // }
 
-        // 새로운 리스너 추가
-        SetButtonListeners();
-        Debug.Log("Button listeners updated.");
-    }
+    //     // 새로운 리스너 추가
+    //     //SetButtonListeners();
+    //     Debug.Log("Button listeners updated.");
+    // }
 
     /// <summary>
     /// 선택된 레일 인덱스 설정
@@ -87,11 +87,11 @@ public class RaytoTile_N_InstantRail : MonoBehaviour
     /// <summary>
     /// 트리거 버튼을 눌렀을 때 레일 설치
     /// </summary>
-    private void TryPlaceRail()
+    private void TryPlaceRail(InputAction.CallbackContext context)
     {
-        if (triggerAction.action.WasPerformedThisFrame() && selectedRailIndex != -1)
+        if (selectedRailIndex != -1)
         {
-
+            //triggerAction.action.WasPerformedThisFrame() &&
             Ray ray = new Ray(Controller.transform.position, Controller.transform.forward);
             Debug.DrawRay(ray.origin, ray.direction * rayLength, Color.red, 2f);
             if (Physics.Raycast(ray, out RaycastHit hitInfo, rayLength))
@@ -114,9 +114,10 @@ public class RaytoTile_N_InstantRail : MonoBehaviour
     /// </summary>
     private void PlaceRail(GameObject tile, Vector3 position)
     {
-        if (selectedRailIndex >= 0 && selectedRailIndex < railPrefabs.Length && railPrefabs[selectedRailIndex] != null)
+        if (selectedRailIndex >= 0 && railPrefabs[selectedRailIndex] != null)
         {
             WASDPlaceRail(tile, position);
+            //selectedRailIndex < railPrefabs.Length &&
             //Instantiate(railPrefabs[selectedRailIndex], position, Quaternion.identity);
             //tile.tag = "INSTALL"; // 타일 상태를 INSTALL로 변경
             //Debug.Log($"레일 {selectedRailIndex} 설치 완료.");
