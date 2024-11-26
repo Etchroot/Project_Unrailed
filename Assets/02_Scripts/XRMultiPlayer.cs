@@ -18,7 +18,7 @@ public class XRMultiPlayer : MonoBehaviourPunCallbacks
     ControllerInputActionManager[] cinputActionManager;
     LocomotionMediator locomotionMediator;
     Rigidbody rig;
-    GameObject[] locomotionmove;
+    [SerializeField] GameObject[] locomotionmove;
 
     private void Awake()
     {
