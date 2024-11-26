@@ -1,50 +1,51 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class MultiButtonColorChangerSimple : MonoBehaviour
 {
-    public Button redButton;    // 빨강 버튼
-    public Button blueButton;   // 파랑 버튼
-    public Button yellowButton; // 노랑 버튼
-    public Image targetImage;   // 색상을 변경할 대상 Image
+    public Button ForwardButton;    // 직선 레일 버튼
+    public Button LeftButton;   // 좌회전 레일 버튼
+    public Button RightButton; // 우회전 레일 버튼
+    public TMP_Text TargetText;   // 색상을 변경할 대상 Text
 
     private void Start()
     {
         // 버튼 클릭 시 각 메서드 연결
-        if (redButton != null)
-            redButton.onClick.AddListener(SetRedColor);
+        if (ForwardButton != null)
+            ForwardButton.onClick.AddListener(SetForward);
 
-        if (blueButton != null)
-            blueButton.onClick.AddListener(SetBlueColor);
+        if (LeftButton != null)
+            LeftButton.onClick.AddListener(SetLeft);
 
-        if (yellowButton != null)
-            yellowButton.onClick.AddListener(SetYellowColor);
+        if (RightButton != null)
+            RightButton.onClick.AddListener(SetRight);
     }
 
-    private void SetRedColor()
+    private void SetForward()
     {
-        if (targetImage != null)
+        if (TargetText != null)
         {
-            targetImage.color = Color.red;
-            Debug.Log("Image color changed to Red");
+            TargetText.text = "Straight";
+            Debug.Log("직선레일 선택");
         }
     }
 
-    private void SetBlueColor()
+    private void SetLeft()
     {
-        if (targetImage != null)
+        if (TargetText != null)
         {
-            targetImage.color = Color.blue;
-            Debug.Log("Image color changed to Blue");
+            TargetText.text = "Left";
+            Debug.Log("좌회전레일 선택");
         }
     }
 
-    private void SetYellowColor()
+    private void SetRight()
     {
-        if (targetImage != null)
+        if (TargetText != null)
         {
-            targetImage.color = Color.yellow;
-            Debug.Log("Image color changed to Yellow");
+            TargetText.text = "Right";
+            Debug.Log("우회전레일 선택");
         }
     }
 }
