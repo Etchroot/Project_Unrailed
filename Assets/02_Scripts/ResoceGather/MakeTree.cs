@@ -31,19 +31,17 @@ public class MakeTree : MonoBehaviour
         {
             hp = value;
             Debug.Log($" {hp}");
-            if (hp <= 0
-            //&& photonView.IsMine
-            )
+            if (hp <= 0)
             {
-                //PhotonNetwork.Instantiate("Log", this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
-                Instantiate(Woodlog, this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
-                //PhotonNetwork.Destroy(this.gameObject);
-                Destroy(this.gameObject);
+                PhotonNetwork.Instantiate("Log", this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
+                // Instantiate(Woodlog, this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
+                PhotonNetwork.Destroy(this.gameObject);
+                // Destroy(this.gameObject);
             }
         }
     }
 
-    //[PunRPC]
+    [PunRPC]
     public void Doit(int v)
     {
         Debug.Log(2);

@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Photon.Pun;
 using UnityEngine;
 
 public class GatherResource : MonoBehaviour
@@ -12,6 +13,7 @@ public class GatherResource : MonoBehaviour
     int numofstone = 0;
     Coroutine ismaking = null;
     [SerializeField] StackRailroad stackRailroad;
+    [PunRPC]
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Tree"))
@@ -42,7 +44,7 @@ public class GatherResource : MonoBehaviour
         yield return new WaitForSeconds(2);
         numofwoodlog -= spendofwood;
         numofstone -= spendofstone;
-        stackRailroad.AddRail(); 
+        stackRailroad.AddRail();
         Debug.Log($" add one rail , remain wood {numofwoodlog} , remain stone {numofstone}");
         ismaking = null;
     }

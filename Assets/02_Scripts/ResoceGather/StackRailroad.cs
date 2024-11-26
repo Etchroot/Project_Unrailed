@@ -22,14 +22,15 @@ public class StackRailroad : MonoBehaviour
         Audio_Source.clip = AudioManager.Instance.Make_Rail;
     }
 
+    [PunRPC]
     public void AddRail()
     {
         if (LoadedRail.Count > 8)
         {
             targetposition.position += stackposition;
         }
-        // GameObject rail = PhotonNetwork.Instantiate("RailRoad", targetposition.position, Quaternion.identity);
-        GameObject rail = Instantiate(railroad, targetposition.position, Quaternion.identity);
+        GameObject rail = PhotonNetwork.Instantiate("RailRoad", targetposition.position, Quaternion.identity);
+        // GameObject rail = Instantiate(railroad, targetposition.position, Quaternion.identity);
         rail.transform.parent = transform;
         rail.GetComponent<Rail>().Train(this);
         rail.name = railroad.name + numofrails++;
@@ -49,12 +50,12 @@ public class StackRailroad : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            Debug.Log($" aabbcc");
-            AddRail();
-        }
-    }
+    // private void Update()
+    // {
+    //     if (Input.GetKeyDown(KeyCode.A))
+    //     {
+    //         Debug.Log($" aabbcc");
+    //         AddRail();
+    //     }
+    // }
 }
