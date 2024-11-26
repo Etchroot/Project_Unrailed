@@ -8,9 +8,13 @@ public class MakeRock : MonoBehaviour
     public GameObject stone;
     PhotonView photonView;
 
+    AudioSource Audio_Source;
+
     private void Awake()
     {
         photonView = GetComponent<PhotonView>();
+        Audio_Source = GetComponent<AudioSource>();
+        Audio_Source.clip = AudioManager.Instance.Rock;
     }
 
     public int HP
@@ -38,6 +42,7 @@ public class MakeRock : MonoBehaviour
     //[PunRPC]
     public void Doit(int v)
     {
+        Audio_Source.Play();
         HP -= v;
     }
 
