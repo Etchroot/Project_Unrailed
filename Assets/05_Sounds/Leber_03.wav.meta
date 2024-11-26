@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: bab072975ee7e7148b7575f7e52f2103
-timeCreated: 1526903076
-licenseType: Store
+guid: c8c504532ad5d49508cfb96c2ac8da28
 AudioImporter:
+  externalObjects: {}
   serializedVersion: 6
   defaultSettings:
     loadType: 0
     sampleRateSetting: 0
     sampleRateOverride: 44100
-    compressionFormat: 1
+    compressionFormat: 0
     quality: 1
     conversionMode: 0
   platformSettingOverrides: {}
@@ -16,15 +15,16 @@ AudioImporter:
   normalize: 1
   preloadAudioData: 1
   loadInBackground: 0
+  ambisonic: 0
   3D: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 119129
-  packageName: Complete Music Collection FREE Edition
-  packageVersion: 2.0
-  assetPath: Assets/Complete Music Collection FREE Edition/Loops/Underwater (Electronic,
-    Action).wav
-  uploadId: 311902
+  productId: 220142
+  packageName: Close Contact
+  packageVersion: 1.0
+  assetPath: Assets/Rogue Waves/Close Contact/Spanner/Spanner_Comb/METLFric_Spanner
+    Comb_Rogue Waves_Close Contact_01.wav
+  uploadId: 495946

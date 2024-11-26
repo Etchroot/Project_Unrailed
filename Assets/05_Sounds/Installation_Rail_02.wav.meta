@@ -1,14 +1,13 @@
 fileFormatVersion: 2
-guid: e7a42cc6b98e8f04f854b3fec0c277b5
-timeCreated: 1526903087
-licenseType: Store
+guid: 74d5736c62aae42ebb3427b3698ea239
 AudioImporter:
+  externalObjects: {}
   serializedVersion: 6
   defaultSettings:
     loadType: 0
     sampleRateSetting: 0
     sampleRateOverride: 44100
-    compressionFormat: 1
+    compressionFormat: 0
     quality: 1
     conversionMode: 0
   platformSettingOverrides: {}
@@ -16,15 +15,16 @@ AudioImporter:
   normalize: 1
   preloadAudioData: 1
   loadInBackground: 0
+  ambisonic: 0
   3D: 1
   userData: 
   assetBundleName: 
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 119129
-  packageName: Complete Music Collection FREE Edition
-  packageVersion: 2.0
-  assetPath: Assets/Complete Music Collection FREE Edition/Loops/In a Rush (Rock,
-    Action).wav
-  uploadId: 311902
+  productId: 220142
+  packageName: Close Contact
+  packageVersion: 1.0
+  assetPath: Assets/Rogue Waves/Close Contact/BakingTray/D_BakingTray_DrumMallet/METLImpt_BakingTray
+    DrumMallet_Rogue Waves_Close Contact_01.wav
+  uploadId: 495946

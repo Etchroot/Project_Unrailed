@@ -1475,6 +1475,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 854828cb0114b9b4aa0c3fb84b3ceaa7, type: 3}
+--- !u!114 &1512934614 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6976329672437249512, guid: 67aaa115df96de54e9547483e00bf38f, type: 3}
+  m_PrefabInstance: {fileID: 1344975986}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1527454410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1555,6 +1566,26 @@ PrefabInstance:
       propertyPath: 'buttons.Array.data[2]'
       value: 
       objectReference: {fileID: 1344975989}
+    - target: {fileID: 6646730510742047006, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6646730510742047006, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
+      propertyPath: LeftButton
+      value: 
+      objectReference: {fileID: 1344975992}
+    - target: {fileID: 6646730510742047006, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
+      propertyPath: TargetText
+      value: 
+      objectReference: {fileID: 1512934614}
+    - target: {fileID: 6646730510742047006, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
+      propertyPath: RightButton
+      value: 
+      objectReference: {fileID: 1344975988}
+    - target: {fileID: 6646730510742047006, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
+      propertyPath: ForwardButton
+      value: 
+      objectReference: {fileID: 1344975993}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
