@@ -17,6 +17,8 @@ public class TrainMove : MonoBehaviour
     [SerializeField] int numoftrain;
     Coroutine pathfollowing;
 
+    [SerializeField] AudioSource Audio_Source;
+
 
     public GameObject Train1;
     private void Awake()
@@ -24,6 +26,17 @@ public class TrainMove : MonoBehaviour
         moveForward = GetComponent<MoveForward>();
         moveLeft = GetComponent<MoveLeft>();
         moveRight = GetComponent<MoveRight>();
+        AudioManager.Initialize();
+
+        if(this.transform.name != "Train")
+        {
+            return;
+        }
+        else
+        {
+            Audio_Source = GetComponent<AudioSource>();
+            Audio_Source.clip = AudioManager.Instance.Train_Horn;
+        }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -47,6 +60,7 @@ public class TrainMove : MonoBehaviour
             return;
         }
         int k = App.Instance.pathofRails[numoftrain];
+        Play_Audio();
         switch (k)
         {
             case 0:
@@ -63,7 +77,30 @@ public class TrainMove : MonoBehaviour
         }
     }
 
-    private IEnumerator TrainStart()
+    public void Play_Audio()
+    {
+        if(this.transform.name != "Train")
+        {
+            return;
+        }
+        else
+        {
+            if(Audio_Source.clip == AudioManager.Instance.Train_Horn)
+            {
+                Audio_Source.Play();
+                Invoke("Setting_Audio", 2.0f);
+            }
+
+            Audio_Source.Play();
+        }
+    }
+
+    public void Setting_Audio()
+    {
+        Audio_Source.clip = AudioManager.Instance.Train_Go;
+    }
+
+    /*private IEnumerator TrainStart()
     {
         while (true)
         {
@@ -95,7 +132,7 @@ public class TrainMove : MonoBehaviour
             }
         }
         Debug.Log($" path follow is end");
-    }
+    }*/
 
 
     // Update is called once per frame

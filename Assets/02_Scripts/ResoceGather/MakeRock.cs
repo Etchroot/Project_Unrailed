@@ -12,6 +12,7 @@ public class MakeRock : MonoBehaviour
 
     private void Awake()
     {
+        AudioManager.Initialize();
         photonView = GetComponent<PhotonView>();
         Audio_Source = GetComponent<AudioSource>();
     }

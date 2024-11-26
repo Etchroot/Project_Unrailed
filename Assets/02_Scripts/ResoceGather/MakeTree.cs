@@ -11,6 +11,7 @@ public class MakeTree : MonoBehaviour
 
     private void Awake()
     {
+        AudioManager.Initialize();
         photonView = GetComponent<PhotonView>();
         Audio_Source = GetComponent<AudioSource>();
     }
@@ -45,6 +46,7 @@ public class MakeTree : MonoBehaviour
     //[PunRPC]
     public void Doit(int v)
     {
+        Debug.Log(2);
         Audio_Source.Play();
         HP -= v;
     }
