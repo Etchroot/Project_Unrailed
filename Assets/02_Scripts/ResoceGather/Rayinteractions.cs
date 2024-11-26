@@ -31,11 +31,11 @@ public class RayInteractorMaterialChange : MonoBehaviourPunCallbacks
                 }
                 if (item.CompareTag("Rock"))
                 {
-                    item.gameObject.GetComponent<MakeRock>()?.Doit(1);
+                    item.gameObject.GetComponent<PhotonView>()?.RPC("Doit", RpcTarget.All, 1);
                 }
                 if (item.CompareTag("Lever"))
                 {
-                    item.gameObject.GetComponent<trainRod>()?.Doit();
+                    item.gameObject.GetComponent<PhotonView>()?.RPC("Doit", RpcTarget.All, 1);
                 }
             }
         });
