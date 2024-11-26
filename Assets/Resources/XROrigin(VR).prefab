@@ -4025,8 +4025,8 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   locomotionmove:
-  - {fileID: 1269429538982303854}
   - {fileID: 6428999897296291082}
+  - {fileID: 1269429538982303854}
 --- !u!54 &-7609100775847651781
 Rigidbody:
   m_ObjectHideFlags: 0
