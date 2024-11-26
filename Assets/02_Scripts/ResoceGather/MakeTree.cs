@@ -1,4 +1,5 @@
 using Photon.Pun;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MakeTree : MonoBehaviour
@@ -7,18 +8,17 @@ public class MakeTree : MonoBehaviour
     public GameObject Woodlog;
     PhotonView photonView;
 
-    AudioSource Audio_Source;
+    [SerializeField] AudioSource Audio_Source;
 
     private void Awake()
     {
-        AudioManager.Initialize();
         photonView = GetComponent<PhotonView>();
-        Audio_Source = GetComponent<AudioSource>();
     }
+
     private void Start()
     {
-        // Audio_Source.clip = AudioManager.Instance.Tree;
-
+        Audio_Source = GetComponent<AudioSource>();
+        Audio_Source.clip = AudioManager.Instance.Tree;
     }
 
     public int HP
@@ -46,7 +46,6 @@ public class MakeTree : MonoBehaviour
     //[PunRPC]
     public void Doit(int v)
     {
-        Debug.Log(2);
         Audio_Source.Play();
         HP -= v;
     }

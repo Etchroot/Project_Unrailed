@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 144583637886878367}
   - component: {fileID: 6433942313704386236}
   - component: {fileID: 3344759749906552365}
-  - component: {fileID: -8675389971626678174}
+  - component: {fileID: 5471401119670056211}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Rock
@@ -50,6 +50,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stone: {fileID: 2086868005071368211, guid: 7fa7546d88e18904bb993113dd6622f6, type: 3}
+  Audio_Source: {fileID: 0}
 --- !u!114 &6433942313704386236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,7 +144,7 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.972747, y: 2.3919144, z: 3.225982}
   m_Center: {x: -0.16439569, y: 3.1823564, z: -0.044419646}
---- !u!82 &-8675389971626678174
+--- !u!82 &5471401119670056211
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

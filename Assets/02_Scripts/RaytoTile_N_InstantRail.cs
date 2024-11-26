@@ -21,7 +21,6 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
 
         // 초기 버튼 클릭 이벤트 설정
         SetButtonListeners();
-        AudioManager.Initialize();
     }
 
     public override void OnEnable()

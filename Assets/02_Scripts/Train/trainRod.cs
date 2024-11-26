@@ -6,7 +6,6 @@ public class trainRod : MonoBehaviour
     Animator anim;
     private void Awake()
     {
-        AudioManager.Initialize();
         anim = GetComponent<Animator>();
         audio_source = GetComponent<AudioSource>();
         audio_source.clip = AudioManager.Instance.Lever;

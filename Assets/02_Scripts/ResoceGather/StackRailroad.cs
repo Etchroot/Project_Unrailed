@@ -17,7 +17,6 @@ public class StackRailroad : MonoBehaviour
 
     private void Awake()
     {
-        AudioManager.Initialize();
         Audio_Source = GetComponent<AudioSource>();
         Audio_Source.clip = AudioManager.Instance.Make_Rail;
     }

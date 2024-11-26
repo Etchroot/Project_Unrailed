@@ -26,7 +26,6 @@ public class TrainMove : MonoBehaviour
         moveForward = GetComponent<MoveForward>();
         moveLeft = GetComponent<MoveLeft>();
         moveRight = GetComponent<MoveRight>();
-        AudioManager.Initialize();
 
         if(this.transform.name != "Train")
         {

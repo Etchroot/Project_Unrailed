@@ -25,13 +25,4 @@ public class AudioManager : MonoBehaviour
         Instance = this;
         DontDestroyOnLoad(gameObject);
     }
-
-    public static void Initialize()
-    {
-        if (Instance == null)
-        {
-            GameObject obj = new GameObject("AudioManager");
-            Instance = obj.AddComponent<AudioManager>();
-        }
-    }
 }
