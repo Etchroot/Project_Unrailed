@@ -68,7 +68,7 @@ public class PhotonManagertest : MonoBehaviourPunCallbacks
         }
         var roomOptions = new RoomOptions
         {
-            MaxPlayers = 2,
+            MaxPlayers = 5,
             IsOpen = true,
             IsVisible = true
         };
