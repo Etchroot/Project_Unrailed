@@ -18,8 +18,9 @@ public class GameManager : MonoBehaviourPunCallbacks
         }
     }
 
-    private void Start()
+    public override void OnJoinedRoom()
     {
+        base.OnJoinedRoom();
         Vector3 pos = new Vector3(Random.Range(61, 62), 3.2f, Random.Range(2, 6));
         player = PhotonNetwork.Instantiate("VrPlyaer", pos, transform.rotation, 0);
         xrorigin.transform.position = pos;
