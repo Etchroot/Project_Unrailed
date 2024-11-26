@@ -6,9 +6,15 @@ public class MakeTree : MonoBehaviour
     private int hp = 3;
     public GameObject Woodlog;
     PhotonView photonView;
+
+    AudioSource Audio_Source;
+    public AudioClip Tree_Clip;
+
     private void Awake()
     {
         photonView = GetComponent<PhotonView>();
+        Audio_Source = GetComponent<AudioSource>();
+        Audio_Source.clip = Tree_Clip;
     }
 
     public int HP
@@ -36,6 +42,7 @@ public class MakeTree : MonoBehaviour
     //[PunRPC]
     public void Doit(int v)
     {
+        Audio_Source.Play();
         HP -= v;
     }
 

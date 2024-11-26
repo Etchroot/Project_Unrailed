@@ -18,7 +18,6 @@ public class TrainMove : MonoBehaviour
     Coroutine pathfollowing;
 
 
-
     public GameObject Train1;
     private void Awake()
     {
