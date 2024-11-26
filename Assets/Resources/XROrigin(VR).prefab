@@ -2841,7 +2841,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6428999897296291082}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9f365cf844c03449bc8973eead2c3c1, type: 3}
   m_Name: 
@@ -2864,7 +2864,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
-    m_InputActionReference: {fileID: -7374733323251553461, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+    m_InputActionReference: {fileID: 6972639530819350904, guid: c348712bda248c246b8c49b3db54643f, type: 3}
     m_ObjectReferenceObject: {fileID: 0}
     m_ManualValue: {x: 0, y: 0}
   m_RightHandTurnInput:
@@ -2888,7 +2888,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6428999897296291082}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 75b29b6c6428c984a8a73ffc2d58063b, type: 3}
   m_Name: 
@@ -4019,17 +4019,8 @@ MonoBehaviour:
   camera: {fileID: 1099291078441040995}
   audioListener: {fileID: 142664035870515898}
   trackedPoseDriver:
-  - {fileID: 5203890013291138020}
-  - {fileID: 6738486048653519881}
-  - {fileID: 7968218199375330869}
-  photonView: {fileID: 1469936774250297930}
-  nearfarinteractor:
   - {fileID: 0}
-  - {fileID: 7966685622551285015}
-  inputActionManager:
-  - {fileID: 8431460374446006923}
-  cinputActionManager:
-  - {fileID: 3562890367745395652}
+  - {fileID: 0}
   - {fileID: 0}
 --- !u!143 &8511159325349164083
 CharacterController:
@@ -4180,7 +4171,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2442306273320644280, guid: 3df3e1220f2164f448701a6de8084f92, type: 3}
   m_PrefabInstance: {fileID: 3180090726569132041}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7966685622551285015}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 25a07ef133a37d140a87cdf1f1c75fdf, type: 3}
@@ -4189,11 +4180,6 @@ MonoBehaviour:
 --- !u!4 &7177937189961627845 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5745700813747042508, guid: 3df3e1220f2164f448701a6de8084f92, type: 3}
-  m_PrefabInstance: {fileID: 3180090726569132041}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &7966685622551285015 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4804964734930210078, guid: 3df3e1220f2164f448701a6de8084f92, type: 3}
   m_PrefabInstance: {fileID: 3180090726569132041}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6262915595855771594
