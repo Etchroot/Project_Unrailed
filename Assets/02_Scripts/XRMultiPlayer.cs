@@ -17,7 +17,12 @@ public class XRMultiPlayer : MonoBehaviourPunCallbacks
     InputActionManager[] inputActionManager;
     ControllerInputActionManager[] cinputActionManager;
     LocomotionMediator locomotionMediator;
+    Rigidbody rig;
 
+    private void Awake()
+    {
+        rig = GetComponent<Rigidbody>();
+    }
     private void OnEnable()
     {
 
@@ -26,6 +31,7 @@ public class XRMultiPlayer : MonoBehaviourPunCallbacks
         {
             camera.enabled = false;
             Destroy(audioListener);
+            rig.isKinematic = true;
             // trackedPoseDriver = GetComponentsInChildren<TrackedPoseDriver>();
             // nearfarinteractor = GetComponentsInChildren<NearFarInteractor>();
             // inputActionManager = GetComponentsInChildren<InputActionManager>();
