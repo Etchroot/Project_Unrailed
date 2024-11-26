@@ -3,8 +3,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using UnityEngine.InputSystem;
+using Photon.Pun;
 
-public class RaytoTile_N_InstantRail : MonoBehaviour
+public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
 {
     [SerializeField] private Transform Controller; // 레이 발사 지점
     [SerializeField] private float rayLength = 10f; // 레이 길이
@@ -13,11 +14,14 @@ public class RaytoTile_N_InstantRail : MonoBehaviour
     [SerializeField] private GameObject[] railPrefabs; // 레일 프리팹 배열
     private int selectedRailIndex = -1; // 선택된 레일 종류 (-1은 선택되지 않음을 의미)
 
+
     AudioSource Audio_Source;
     public AudioClip Rail_Clip;
 
-    void Start()
+    public override void OnJoinedRoom()
     {
+        base.OnJoinedRoom();
+
         // 초기 버튼 클릭 이벤트 설정
         SetButtonListeners();
         Audio_Source = GetComponent<AudioSource>();

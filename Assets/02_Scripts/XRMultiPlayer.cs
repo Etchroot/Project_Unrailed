@@ -19,7 +19,7 @@ public class XRMultiPlayer : MonoBehaviour
     {
         if (!photonView.IsMine)
         {
-            Destroy(camera);
+            camera.enabled = false;
             Destroy(audioListener);
             trackedPoseDriver = GetComponentsInChildren<TrackedPoseDriver>();
             foreach (var item in trackedPoseDriver)
