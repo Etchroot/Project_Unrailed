@@ -71,7 +71,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Woodlog: {fileID: 5811622506801805854, guid: d91ba048ceee48d4380a17799163fbe7, type: 3}
-  Tree_Clip: {fileID: 8300000, guid: ce4705f87fe394792849f16d74c408f3, type: 3}
 --- !u!114 &6964258272334026801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +155,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0

@@ -14,6 +14,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject[] railPrefabs; // 레일 프리팹 배열
     private int selectedRailIndex = -1; // 선택된 레일 종류 (-1은 선택되지 않음을 의미)
 
+    //AudioManager Instance_Audio = AudioManager.Instance;
     AudioSource Audio_Source;
 
     public override void OnJoinedRoom()
@@ -22,6 +23,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
 
         // 초기 버튼 클릭 이벤트 설정
         SetButtonListeners();
+        AudioManager.Initialize();
         Audio_Source = GetComponent<AudioSource>();
         Audio_Source.clip = AudioManager.Instance.Set_Rail;
     }
