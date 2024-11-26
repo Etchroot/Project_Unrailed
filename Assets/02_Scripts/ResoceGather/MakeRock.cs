@@ -32,9 +32,8 @@ public class MakeRock : MonoBehaviour
         {
             hp = value;
             Debug.Log($" {hp}");
-            if (hp <= 0
-            // && photonView.IsMine
-            )
+            if (hp <= 0 && PhotonNetwork.IsMasterClient)
+
             {
                 PhotonNetwork.Instantiate("Stone", this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
                 // Instantiate(stone, this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
