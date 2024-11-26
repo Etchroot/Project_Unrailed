@@ -4024,6 +4024,9 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  locomotionmove:
+  - {fileID: 1269429538982303854}
+  - {fileID: 6428999897296291082}
 --- !u!54 &-7609100775847651781
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -4049,7 +4052,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &-7672808165774778178
 CapsuleCollider:

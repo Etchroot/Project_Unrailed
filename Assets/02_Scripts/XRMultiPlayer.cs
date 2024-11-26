@@ -18,6 +18,7 @@ public class XRMultiPlayer : MonoBehaviourPunCallbacks
     ControllerInputActionManager[] cinputActionManager;
     LocomotionMediator locomotionMediator;
     Rigidbody rig;
+    GameObject[] locomotionmove;
 
     private void Awake()
     {
@@ -32,6 +33,10 @@ public class XRMultiPlayer : MonoBehaviourPunCallbacks
             camera.enabled = false;
             Destroy(audioListener);
             rig.isKinematic = true;
+            foreach (var item in locomotionmove)
+            {
+                Destroy(item);
+            }
             // trackedPoseDriver = GetComponentsInChildren<TrackedPoseDriver>();
             // nearfarinteractor = GetComponentsInChildren<NearFarInteractor>();
             // inputActionManager = GetComponentsInChildren<InputActionManager>();
