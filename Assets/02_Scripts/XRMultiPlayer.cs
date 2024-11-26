@@ -26,28 +26,28 @@ public class XRMultiPlayer : MonoBehaviourPunCallbacks
         {
             camera.enabled = false;
             Destroy(audioListener);
-            trackedPoseDriver = GetComponentsInChildren<TrackedPoseDriver>();
-            nearfarinteractor = GetComponentsInChildren<NearFarInteractor>();
-            inputActionManager = GetComponentsInChildren<InputActionManager>();
-            cinputActionManager = GetComponentsInChildren<ControllerInputActionManager>();
-            locomotionMediator = GetComponentInChildren<LocomotionMediator>();
-            foreach (var item in trackedPoseDriver)
-            {
-                Destroy(item);
-            }
-            foreach (var item in nearfarinteractor)
-            {
-                Destroy(item);
-            }
-            foreach (var item in cinputActionManager)
-            {
-                Destroy(item);
-            }
-            foreach (var item in inputActionManager)
-            {
-                Destroy(item);
-            }
-            Destroy(locomotionMediator);
+            // trackedPoseDriver = GetComponentsInChildren<TrackedPoseDriver>();
+            // nearfarinteractor = GetComponentsInChildren<NearFarInteractor>();
+            // inputActionManager = GetComponentsInChildren<InputActionManager>();
+            // cinputActionManager = GetComponentsInChildren<ControllerInputActionManager>();
+            // locomotionMediator = GetComponentInChildren<LocomotionMediator>();
+            // foreach (var item in trackedPoseDriver)
+            // {
+            //     Destroy(item);
+            // }
+            // foreach (var item in nearfarinteractor)
+            // {
+            //     Destroy(item);
+            // }
+            // foreach (var item in cinputActionManager)
+            // {
+            //     Destroy(item);
+            // }
+            // foreach (var item in inputActionManager)
+            // {
+            //     Destroy(item);
+            // }
+            // Destroy(locomotionMediator);
         }
     }
 }
