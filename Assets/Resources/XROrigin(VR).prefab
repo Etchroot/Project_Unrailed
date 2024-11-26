@@ -4021,7 +4021,7 @@ MonoBehaviour:
   trackedPoseDriver:
   - {fileID: 5203890013291138020}
   - {fileID: 6738486048653519881}
-  - {fileID: 0}
+  - {fileID: 7968218199375330869}
   photonView: {fileID: 1469936774250297930}
   nearfarinteractor:
   - {fileID: 0}
@@ -4055,7 +4055,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!1001 &1685114854488655744
 PrefabInstance:
   m_ObjectHideFlags: 0
