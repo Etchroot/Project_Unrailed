@@ -51,6 +51,7 @@ public class TrainMove : MonoBehaviour
 
     }
 
+    [PunRPC]
     void TrainGo()
     {
         if (App.Instance.pathofRails.Count == numoftrain)
