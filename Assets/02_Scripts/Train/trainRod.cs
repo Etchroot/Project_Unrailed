@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 
 public class trainRod : MonoBehaviour
@@ -11,6 +12,7 @@ public class trainRod : MonoBehaviour
         audio_source.clip = AudioManager.Instance.Lever;
     }
 
+    [PunRPC]
     public void Doit()
     {
         audio_source.Play();
