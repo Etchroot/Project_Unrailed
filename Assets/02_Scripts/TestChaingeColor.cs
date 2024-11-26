@@ -35,7 +35,7 @@ public class MultiButtonColorChangerSimple : MonoBehaviour
     {
         if (TargetText != null)
         {
-            TargetText.text = "Select : Straight";
+            TargetText.text = "Selected : Straight";
             Debug.Log("직선레일 선택");
         }
     }
@@ -44,7 +44,7 @@ public class MultiButtonColorChangerSimple : MonoBehaviour
     {
         if (TargetText != null)
         {
-            TargetText.text = "Select : Left";
+            TargetText.text = "Selected : Left";
             Debug.Log("좌회전레일 선택");
         }
     }
@@ -53,7 +53,7 @@ public class MultiButtonColorChangerSimple : MonoBehaviour
     {
         if (TargetText != null)
         {
-            TargetText.text = "Select : Right";
+            TargetText.text = "Selected : Right";
             Debug.Log("우회전레일 선택");
         }
     }
