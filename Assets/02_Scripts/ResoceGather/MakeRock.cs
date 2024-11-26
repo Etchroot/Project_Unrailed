@@ -8,7 +8,6 @@ public class MakeRock : MonoBehaviour
     public GameObject stone;
     PhotonView photonView;
 
-    //AudioManager Instance_Audio = AudioManager.Instance;
     AudioSource Audio_Source;
 
     private void Awake()

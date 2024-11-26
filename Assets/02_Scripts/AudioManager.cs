@@ -5,8 +5,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip Tree;
     public AudioClip Rock;
     public AudioClip Set_Rail;
-    public AudioClip Starting_Train;
-    public AudioClip Moving_Train;
+    public AudioClip Make_Rail;
+    public AudioClip Train_Horn;
+    public AudioClip Train_Go;
     public AudioClip Lever;
     public AudioClip Success;
     public AudioClip Fail;

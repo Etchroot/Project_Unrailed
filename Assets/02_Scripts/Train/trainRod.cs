@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class trainRod : MonoBehaviour
 {
-    //AudioManager Instance_Audio = AudioManager.Instance;
     AudioSource audio_source;
     Animator anim;
     private void Awake()

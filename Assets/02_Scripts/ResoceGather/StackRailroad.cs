@@ -13,6 +13,15 @@ public class StackRailroad : MonoBehaviour
     Transform spawnpoint;
     Vector3 stackposition = new Vector3(0, 0.18f, 0);
     int numofrails = 0;
+    AudioSource Audio_Source;
+
+    private void Awake()
+    {
+        AudioManager.Initialize();
+        Audio_Source = GetComponent<AudioSource>();
+        Audio_Source.clip = AudioManager.Instance.Make_Rail;
+    }
+
     public void AddRail()
     {
         if (LoadedRail.Count > 8)
@@ -26,6 +35,8 @@ public class StackRailroad : MonoBehaviour
         rail.name = railroad.name + numofrails++;
 
         LoadedRail.Add(rail);
+
+        Audio_Source.Play();
     }
 
     public void TakeRail(GameObject rail)

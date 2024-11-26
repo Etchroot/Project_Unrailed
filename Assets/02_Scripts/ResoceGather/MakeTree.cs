@@ -7,7 +7,6 @@ public class MakeTree : MonoBehaviour
     public GameObject Woodlog;
     PhotonView photonView;
 
-    //AudioManager Instance_Audio = AudioManager.Instance;
     AudioSource Audio_Source;
 
     private void Awake()

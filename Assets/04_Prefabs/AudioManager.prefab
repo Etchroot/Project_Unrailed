@@ -47,9 +47,9 @@ MonoBehaviour:
   Tree: {fileID: 8300000, guid: ce4705f87fe394792849f16d74c408f3, type: 3}
   Rock: {fileID: 8300000, guid: 1f8b21ee9de614645859ab02c8bf88b2, type: 3}
   Set_Rail: {fileID: 8300000, guid: 74d5736c62aae42ebb3427b3698ea239, type: 3}
-  Starting_Train: {fileID: 8300000, guid: 419afc0c8bd73f947adc4174425e7bfa, type: 3}
-  Moving_Train: {fileID: 8300000, guid: afd897ede98d042619838ec5dbece785, type: 3}
-  Background: {fileID: 8300000, guid: 7fc28ce420950944b9b2c3155a4dd8c2, type: 3}
+  Make_Rail: {fileID: 8300000, guid: 956ab59e5a540417286d0bc6bf8d1489, type: 3}
+  Train_Horn: {fileID: 8300000, guid: a35ed638a1b3f354ea60da7aa1cc60c8, type: 3}
+  Train_Go: {fileID: 8300000, guid: f05f3b47a5ce75f4d89a794f54d58dd5, type: 3}
   Lever: {fileID: 8300000, guid: 07346ecb64ea14d018811f7767ff4df5, type: 3}
   Success: {fileID: 8300000, guid: e7a42cc6b98e8f04f854b3fec0c277b5, type: 3}
   Fail: {fileID: 8300000, guid: f9294c9fe618b4f5c9b01c3f575be618, type: 3}

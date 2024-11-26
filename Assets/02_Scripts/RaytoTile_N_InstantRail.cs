@@ -14,8 +14,6 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
     [SerializeField] private GameObject[] railPrefabs; // 레일 프리팹 배열
     private int selectedRailIndex = -1; // 선택된 레일 종류 (-1은 선택되지 않음을 의미)
 
-    //AudioManager Instance_Audio = AudioManager.Instance;
-    AudioSource Audio_Source;
 
     public override void OnJoinedRoom()
     {
@@ -24,8 +22,6 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
         // 초기 버튼 클릭 이벤트 설정
         SetButtonListeners();
         AudioManager.Initialize();
-        Audio_Source = GetComponent<AudioSource>();
-        Audio_Source.clip = AudioManager.Instance.Set_Rail;
     }
 
     public override void OnEnable()
@@ -121,6 +117,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                         Debug.Log("TRyPlaceRail.4");
                         Debug.Log("타일이 EMPTY 상태입니다.");
                         PlaceRail(hitInfo.collider.gameObject, hitInfo.collider.bounds.center);
+                        
                     }
                     else
                     {
@@ -203,7 +200,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[0], position, Quaternion.identity);
                     App.Instance.pathofRails.Add(0);
-                    Audio_Source.Play();
+                    
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -211,7 +208,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[0], position, Quaternion.Euler(0f, 90f, 0f));
                     App.Instance.pathofRails.Add(0);
-                    Audio_Source.Play();
+                    
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -221,7 +218,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[1], position, Quaternion.identity);
                     App.Instance.pathofRails.Add(1);
-                    Audio_Source.Play();
+                    
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -229,7 +226,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[1], position, Quaternion.Euler(0f, 90f, 0f));
                     App.Instance.pathofRails.Add(1);
-                    Audio_Source.Play();
+                    
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -237,7 +234,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[1], position, Quaternion.Euler(0f, 180f, 0f));
                     App.Instance.pathofRails.Add(1);
-                    Audio_Source.Play();
+                    
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -245,7 +242,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[1], position, Quaternion.Euler(0f, 270f, 0f));
                     App.Instance.pathofRails.Add(1);
-                    Audio_Source.Play();
+                    
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -255,7 +252,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[2], position, Quaternion.identity);
                     App.Instance.pathofRails.Add(2);
-                    Audio_Source.Play();
+                    
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -263,7 +260,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[2], position, Quaternion.Euler(0f, 90f, 0f));
                     App.Instance.pathofRails.Add(2);
-                    Audio_Source.Play();
+                    
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -271,7 +268,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[2], position, Quaternion.Euler(0f, 180f, 0f));
                     App.Instance.pathofRails.Add(2);
-                    Audio_Source.Play();
+                    
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -279,7 +276,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[2], position, Quaternion.Euler(0f, 270f, 0f));
                     App.Instance.pathofRails.Add(2);
-                    Audio_Source.Play();
+                    
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
