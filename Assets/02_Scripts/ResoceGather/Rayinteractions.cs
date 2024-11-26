@@ -25,7 +25,9 @@ public class RayInteractorMaterialChange : MonoBehaviourPunCallbacks
                 if (item.CompareTag("Tree"))
                 {
                     Debug.Log(1);
-                    item.gameObject.GetComponent<MakeTree>()?.Doit(1);
+
+                    item.gameObject.GetComponent<PhotonView>()?.RPC("Doit", RpcTarget.All, 1);
+                    //item.gameObject.GetComponent<MakeTree>()?.Doit(1);
                 }
                 if (item.CompareTag("Rock"))
                 {
