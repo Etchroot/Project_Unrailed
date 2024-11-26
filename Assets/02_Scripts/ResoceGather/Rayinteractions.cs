@@ -17,7 +17,7 @@ public class RayInteractorMaterialChange : MonoBehaviourPunCallbacks
     // Ray가 물체를 가리키고 있는지 체크하는 함수
     public override void OnJoinedRoom()
     {
-        nearFarInteractor = App.Instance.rightnearFarInteractor;
+        //nearFarInteractor = App.Instance.rightnearFarInteractor;
         nearFarInteractor.selectEntered.AddListener((param1) =>
         {
             foreach (var item in param1.interactableObject.colliders)

@@ -813,7 +813,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: XROrigin(VR)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1469936774250297930, guid: 67aaa115df96de54e9547483e00bf38f, type: 3}
+    - {fileID: 839157813239169455, guid: 67aaa115df96de54e9547483e00bf38f, type: 3}
+    - {fileID: 4921417314378450343, guid: 67aaa115df96de54e9547483e00bf38f, type: 3}
+    - {fileID: 6386537643887006162, guid: 67aaa115df96de54e9547483e00bf38f, type: 3}
+    - {fileID: 2751877007032580530, guid: 67aaa115df96de54e9547483e00bf38f, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1161,7 +1166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dbbeda76ea587743bda6b4eb2358383, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nearFarInteractor: {fileID: 0}
+  nearFarInteractor: {fileID: 2074574143}
 --- !u!4 &995017550
 Transform:
   m_ObjectHideFlags: 0
@@ -1743,6 +1748,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 854828cb0114b9b4aa0c3fb84b3ceaa7, type: 3}
+--- !u!114 &2074574143 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6971696764554756425, guid: 67aaa115df96de54e9547483e00bf38f, type: 3}
+  m_PrefabInstance: {fileID: 833720220}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25a07ef133a37d140a87cdf1f1c75fdf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2110877897
 GameObject:
   m_ObjectHideFlags: 0

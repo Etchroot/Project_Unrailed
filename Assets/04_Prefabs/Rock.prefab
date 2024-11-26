@@ -50,7 +50,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stone: {fileID: 2086868005071368211, guid: 7fa7546d88e18904bb993113dd6622f6, type: 3}
-  Rock_Clip: {fileID: 8300000, guid: 1f8b21ee9de614645859ab02c8bf88b2, type: 3}
 --- !u!114 &6433942313704386236
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,7 +155,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
