@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Timeline;
 
@@ -27,7 +28,7 @@ public class TrainMove : MonoBehaviour
         moveLeft = GetComponent<MoveLeft>();
         moveRight = GetComponent<MoveRight>();
 
-        if(this.transform.name != "Train")
+        if (this.transform.name != "Train")
         {
             return;
         }
@@ -79,13 +80,13 @@ public class TrainMove : MonoBehaviour
 
     public void Play_Audio()
     {
-        if(this.transform.name != "Train")
+        if (this.transform.name != "Train")
         {
             return;
         }
         else
         {
-            if(Audio_Source.clip == AudioManager.Instance.Train_Horn)
+            if (Audio_Source.clip == AudioManager.Instance.Train_Horn)
             {
                 Audio_Source.Play();
                 Invoke("Setting_Audio", 2.0f);
