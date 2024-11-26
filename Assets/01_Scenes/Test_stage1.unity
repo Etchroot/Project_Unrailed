@@ -1580,7 +1580,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightnearFarInteractor: {fileID: 0}
-  pathofRails: 000000000000000000000000
+  pathofRails: 000000000000000000000000020000000000000001000000000000000000000000000000000000000000000000000000020000000000000000000000
   isgrabedrail: 0
 --- !u!4 &1037487475
 Transform:
@@ -3485,7 +3485,6 @@ GameObject:
   - component: {fileID: 3588287125960091962}
   - component: {fileID: 8825675899678088008}
   - component: {fileID: 8182224729383737434}
-  - component: {fileID: 2655131327696243199}
   - component: {fileID: 1161929315608093157}
   m_Layer: 0
   m_Name: Rail_UI_Manager
@@ -5142,26 +5141,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2471961126991625811}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2655131327696243199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 991603250527895008}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c847f5a7950e5a34cb717e078f73e8ce, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  railbuttons:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  railPrefab:
-  - {fileID: 818672354547905127, guid: 854828cb0114b9b4aa0c3fb84b3ceaa7, type: 3}
-  - {fileID: 8818431233968287108, guid: 9af3ad66aa17c264c831e8e73bc38460, type: 3}
-  - {fileID: 8322533814086065417, guid: ea294c65767b13a4f87bee31318adecf, type: 3}
 --- !u!114 &2660204305845699126
 MonoBehaviour:
   m_ObjectHideFlags: 0

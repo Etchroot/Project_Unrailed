@@ -10,7 +10,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: bea0359f782544918b565d636b877b6f, type: 3}
       propertyPath: m_Name
-      value: Trunk
+      value: Log
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: bea0359f782544918b565d636b877b6f, type: 3}
       propertyPath: m_TagString
