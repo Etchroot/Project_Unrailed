@@ -114,6 +114,7 @@ public class PhotonManagertest : MonoBehaviourPunCallbacks
         {
             //    UnityEngine.SceneManagement.SceneManager.LoadScene("1_Game");
             StartCoroutine(logplyers());
+
         }
     }
 
