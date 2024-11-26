@@ -13,7 +13,11 @@ public class MakeTree : MonoBehaviour
     {
         photonView = GetComponent<PhotonView>();
         Audio_Source = GetComponent<AudioSource>();
+    }
+    private void Start()
+    {
         Audio_Source.clip = AudioManager.Instance.Tree;
+
     }
 
     public int HP

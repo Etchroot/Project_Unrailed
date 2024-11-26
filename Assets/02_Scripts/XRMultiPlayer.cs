@@ -18,9 +18,9 @@ public class XRMultiPlayer : MonoBehaviourPunCallbacks
     ControllerInputActionManager[] cinputActionManager;
     LocomotionMediator locomotionMediator;
 
-    public override void OnJoinedRoom()
+    private void OnEnable()
     {
-        base.OnJoinedRoom();
+
 
         if (!photonView.IsMine)
         {
