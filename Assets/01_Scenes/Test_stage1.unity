@@ -864,6 +864,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Train
       objectReference: {fileID: 0}
+    - target: {fileID: 3965355898397820079, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
+      propertyPath: sceneViewId
+      value: 262
+      objectReference: {fileID: 0}
     - target: {fileID: 5228209713559796469, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 54
@@ -917,6 +921,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2285975990275025679, guid: 46008fe8a9e338a489ce980cea29bb55, type: 3}
+      propertyPath: sceneViewId
+      value: 261
+      objectReference: {fileID: 0}
     - target: {fileID: 4344520578706854904, guid: 46008fe8a9e338a489ce980cea29bb55, type: 3}
       propertyPath: stackRailroad
       value: 
@@ -978,6 +986,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2642770275004575175, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
+      propertyPath: sceneViewId
+      value: 263
+      objectReference: {fileID: 0}
     - target: {fileID: 4775539426459617878, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 54
@@ -1046,6 +1058,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3371225387802448163, guid: 57d1e9eac8fe35b4192509d234695937, type: 3}
+      propertyPath: smoke1
+      value: 
+      objectReference: {fileID: 1931497213}
+    - target: {fileID: 3371225387802448163, guid: 57d1e9eac8fe35b4192509d234695937, type: 3}
+      propertyPath: smoke2
+      value: 
+      objectReference: {fileID: 964715065}
     - target: {fileID: 7272410701193286100, guid: 57d1e9eac8fe35b4192509d234695937, type: 3}
       propertyPath: m_Name
       value: TrainRod
@@ -1097,7 +1117,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7272410701193286100, guid: 57d1e9eac8fe35b4192509d234695937, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1486068855}
   m_SourcePrefab: {fileID: 100100000, guid: 57d1e9eac8fe35b4192509d234695937, type: 3}
 --- !u!1 &748067753
 GameObject:
@@ -1505,6 +1528,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
+--- !u!198 &964715065 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 6631108305050245112, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
+  m_PrefabInstance: {fileID: 553862133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &995017548
 GameObject:
   m_ObjectHideFlags: 0
@@ -2593,6 +2621,33 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 909d6f223022ebc4e8abcb935184140c, type: 3}
+--- !u!1 &1486068846 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7272410701193286100, guid: 57d1e9eac8fe35b4192509d234695937, type: 3}
+  m_PrefabInstance: {fileID: 706438822}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1486068855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1486068846}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 264
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1001 &1538262497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2707,6 +2762,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 467c935c853225e4aaa24fde01962400, type: 3}
+--- !u!198 &1931497213 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 7482301214263010664, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
+  m_PrefabInstance: {fileID: 553862133}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2007668341
 PrefabInstance:
   m_ObjectHideFlags: 0
