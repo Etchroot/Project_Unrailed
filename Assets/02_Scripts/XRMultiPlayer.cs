@@ -17,7 +17,13 @@ public class XRMultiPlayer : MonoBehaviourPunCallbacks
     InputActionManager[] inputActionManager;
     ControllerInputActionManager[] cinputActionManager;
     LocomotionMediator locomotionMediator;
+    Rigidbody rig;
+    [SerializeField] GameObject[] locomotionmove;
 
+    private void Awake()
+    {
+        rig = GetComponent<Rigidbody>();
+    }
     private void OnEnable()
     {
 
@@ -26,28 +32,33 @@ public class XRMultiPlayer : MonoBehaviourPunCallbacks
         {
             camera.enabled = false;
             Destroy(audioListener);
+            rig.isKinematic = true;
+            foreach (var item in locomotionmove)
+            {
+                Destroy(item);
+            }
             trackedPoseDriver = GetComponentsInChildren<TrackedPoseDriver>();
-            nearfarinteractor = GetComponentsInChildren<NearFarInteractor>();
-            inputActionManager = GetComponentsInChildren<InputActionManager>();
+            // nearfarinteractor = GetComponentsInChildren<NearFarInteractor>();
+            // inputActionManager = GetComponentsInChildren<InputActionManager>();
             cinputActionManager = GetComponentsInChildren<ControllerInputActionManager>();
-            locomotionMediator = GetComponentInChildren<LocomotionMediator>();
+            // locomotionMediator = GetComponentInChildren<LocomotionMediator>();
             foreach (var item in trackedPoseDriver)
             {
                 Destroy(item);
             }
-            foreach (var item in nearfarinteractor)
-            {
-                Destroy(item);
-            }
+            // foreach (var item in nearfarinteractor)
+            // {
+            //     Destroy(item);
+            // }
             foreach (var item in cinputActionManager)
             {
                 Destroy(item);
             }
-            foreach (var item in inputActionManager)
-            {
-                Destroy(item);
-            }
-            Destroy(locomotionMediator);
+            // foreach (var item in inputActionManager)
+            // {
+            //     Destroy(item);
+            // }
+            // Destroy(locomotionMediator);
         }
     }
 }

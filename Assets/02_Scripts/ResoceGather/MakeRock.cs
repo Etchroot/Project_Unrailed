@@ -18,7 +18,7 @@ public class MakeRock : MonoBehaviour
     }
     private void Start()
     {
-        Audio_Source.clip = AudioManager.Instance.Rock;
+        // Audio_Source.clip = AudioManager.Instance.Rock;
     }
 
     public int HP

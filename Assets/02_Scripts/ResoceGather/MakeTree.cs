@@ -17,7 +17,7 @@ public class MakeTree : MonoBehaviour
     }
     private void Start()
     {
-        Audio_Source.clip = AudioManager.Instance.Tree;
+        // Audio_Source.clip = AudioManager.Instance.Tree;
 
     }
 
