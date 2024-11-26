@@ -60,15 +60,15 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2337955080868998308}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 00d76798d7ad89f498a907c4c43b1ef8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  redButton: {fileID: 0}
-  blueButton: {fileID: 0}
-  yellowButton: {fileID: 0}
-  targetImage: {fileID: 0}
+  ForwardButton: {fileID: 0}
+  LeftButton: {fileID: 0}
+  RightButton: {fileID: 0}
+  TargetText: {fileID: 0}
 --- !u!114 &677826676004673723
 MonoBehaviour:
   m_ObjectHideFlags: 0

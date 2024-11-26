@@ -1044,6 +1044,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rightnearFarInteractor: {fileID: 0}
   pathofRails: 000000000000000000000000
+  isgrabedrail: 0
 --- !u!4 &1037487475
 Transform:
   m_ObjectHideFlags: 0
@@ -1401,111 +1402,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 854828cb0114b9b4aa0c3fb84b3ceaa7, type: 3}
---- !u!1001 &1527454410
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 2052757441642707070, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -8.159783
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052757441642707070, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 14.425206
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052757441642707070, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 41.02152
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052757441642707070, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052757441642707070, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052757441642707070, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052757441642707070, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052757441642707070, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052757441642707070, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2052757441642707070, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2337955080868998308, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: m_Name
-      value: Rail_UI_Manager
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436314649029030049, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: Controller
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436314649029030049, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: 'railButtons.Array.data[0]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436314649029030049, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: 'railButtons.Array.data[1]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4436314649029030049, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: 'railButtons.Array.data[2]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6326411085911656972, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: 'buttons.Array.data[0]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6326411085911656972, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: 'buttons.Array.data[1]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6326411085911656972, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: 'buttons.Array.data[2]'
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646730510742047006, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646730510742047006, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: LeftButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646730510742047006, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: TargetText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646730510742047006, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: RightButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6646730510742047006, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
-      propertyPath: ForwardButton
-      value: 
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: a754f0d1382673548ae4e79391e17e0f, type: 3}
 --- !u!1001 &1538262497
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1772,7 +1668,6 @@ SceneRoots:
   - {fileID: 748067757}
   - {fileID: 2110877900}
   - {fileID: 1037487475}
-  - {fileID: 1527454410}
   - {fileID: 1275948958}
   - {fileID: 2007668341}
   - {fileID: 1077819712}

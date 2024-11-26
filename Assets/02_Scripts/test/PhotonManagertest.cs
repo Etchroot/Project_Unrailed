@@ -113,7 +113,7 @@ public class PhotonManagertest : MonoBehaviourPunCallbacks
         if (PhotonNetwork.IsMasterClient)
         {
             //    UnityEngine.SceneManagement.SceneManager.LoadScene("1_Game");
-            StartCoroutine(logplyers());
+            //StartCoroutine(logplyers());
 
         }
     }
