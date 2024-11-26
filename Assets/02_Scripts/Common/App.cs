@@ -11,4 +11,5 @@ public class App : Singleton<App>
 
     public List<int> pathofRails;
     public Action traingo;
+    public bool isgrabedrail = false;
 }
