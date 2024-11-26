@@ -32,12 +32,18 @@ public class MakeTree : MonoBehaviour
             hp = value;
             Debug.Log($" {hp}");
             if (hp <= 0 && PhotonNetwork.IsMasterClient)
-            {
-                PhotonNetwork.Instantiate("Log", this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
-                // Instantiate(Woodlog, this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
-                PhotonNetwork.Destroy(this.gameObject);
-                // Destroy(this.gameObject);
-            }
+                MakeLog();
+        }
+    }
+
+    private void MakeLog()
+    {
+
+        {
+            PhotonNetwork.Instantiate("Log", this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
+            // Instantiate(Woodlog, this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
+            PhotonNetwork.Destroy(this.gameObject);
+            // Destroy(this.gameObject);
         }
     }
 
