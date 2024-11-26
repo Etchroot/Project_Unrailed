@@ -627,7 +627,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &748067754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1043,7 +1043,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rightnearFarInteractor: {fileID: 0}
-  pathofRails: 000000000000000000000000000000000200000002000000
+  pathofRails: 000000000000000000000000
 --- !u!4 &1037487475
 Transform:
   m_ObjectHideFlags: 0
@@ -1339,6 +1339,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2434144196150924161, guid: 67aaa115df96de54e9547483e00bf38f, type: 3}
+      propertyPath: m_MoveSpeed
+      value: 4.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2752740911719203000, guid: 67aaa115df96de54e9547483e00bf38f, type: 3}
+      propertyPath: m_Mediator
+      value: 
+      objectReference: {fileID: 1595983964}
+    - target: {fileID: 2752740911719203000, guid: 67aaa115df96de54e9547483e00bf38f, type: 3}
+      propertyPath: m_TurnSpeed
+      value: 45
+      objectReference: {fileID: 0}
     - target: {fileID: 9129489394975904039, guid: 67aaa115df96de54e9547483e00bf38f, type: 3}
       propertyPath: m_Name
       value: XROrigin(VR)
@@ -1605,6 +1617,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8e88f96d9b7616d4fab9a27688bd03da, type: 3}
+--- !u!114 &1595983964 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7564042441301243356, guid: 67aaa115df96de54e9547483e00bf38f, type: 3}
+  m_PrefabInstance: {fileID: 1344975986}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fa7b4195685c3846be746c74f0ab2f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1745297976
 PrefabInstance:
   m_ObjectHideFlags: 0
