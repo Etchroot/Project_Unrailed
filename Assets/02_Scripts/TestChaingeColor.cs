@@ -12,21 +12,30 @@ public class MultiButtonColorChangerSimple : MonoBehaviour
     private void Start()
     {
         // 버튼 클릭 시 각 메서드 연결
-        if (ForwardButton != null)
-            ForwardButton.onClick.AddListener(SetForward);
+        // if (ForwardButton != null)
+        // {
+        //ForwardButton.onClick.RemoveAllListeners();
+        ForwardButton?.onClick.AddListener(SetForward);
+        //}
 
-        if (LeftButton != null)
-            LeftButton.onClick.AddListener(SetLeft);
+        //if (LeftButton != null)
+        //{
+        //LeftButton.onClick.RemoveAllListeners();
+        LeftButton?.onClick.AddListener(SetLeft);
+        //}
 
-        if (RightButton != null)
-            RightButton.onClick.AddListener(SetRight);
+        //if (RightButton != null)
+        //{
+        //RightButton.onClick.RemoveAllListeners();
+        RightButton?.onClick.AddListener(SetRight);
+        //}
     }
 
     private void SetForward()
     {
         if (TargetText != null)
         {
-            TargetText.text = "Straight";
+            TargetText.text = "Select : Straight";
             Debug.Log("직선레일 선택");
         }
     }
@@ -35,7 +44,7 @@ public class MultiButtonColorChangerSimple : MonoBehaviour
     {
         if (TargetText != null)
         {
-            TargetText.text = "Left";
+            TargetText.text = "Select : Left";
             Debug.Log("좌회전레일 선택");
         }
     }
@@ -44,7 +53,7 @@ public class MultiButtonColorChangerSimple : MonoBehaviour
     {
         if (TargetText != null)
         {
-            TargetText.text = "Right";
+            TargetText.text = "Select : Right";
             Debug.Log("우회전레일 선택");
         }
     }
