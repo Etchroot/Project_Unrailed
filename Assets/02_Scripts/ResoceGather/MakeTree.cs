@@ -1,3 +1,4 @@
+using System;
 using Photon.Pun;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -31,19 +32,13 @@ public class MakeTree : MonoBehaviour
         {
             hp = value;
             Debug.Log($" {hp}");
-            if (hp <= 0 && PhotonNetwork.IsMasterClient)
-                MakeLog();
-        }
-    }
-
-    private void MakeLog()
-    {
-
-        {
-            PhotonNetwork.Instantiate("Log", this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
-            // Instantiate(Woodlog, this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
-            PhotonNetwork.Destroy(this.gameObject);
-            // Destroy(this.gameObject);
+            if (hp <= 0)
+            {
+                PhotonNetwork.Instantiate("Log", this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
+                // Instantiate(Woodlog, this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
+                PhotonNetwork.Destroy(this.gameObject);
+                // Destroy(this.gameObject);
+            }
         }
     }
 
@@ -51,8 +46,22 @@ public class MakeTree : MonoBehaviour
     public void Doit(int v)
     {
         Audio_Source.Play();
-        HP -= v;
+        Debug.Log($" [doit] tree hp is {hp}");
+        damage(v);
+
     }
 
+    private void damage(int v)
+    {
+        hp -= v;
+        Debug.Log($" [damage] tree hp is {hp}");
+        if (hp <= 0 && PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.Instantiate("Log", this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
+            // Instantiate(Woodlog, this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
+            PhotonNetwork.Destroy(this.gameObject);
+            // Destroy(this.gameObject);
+        }
 
+    }
 }
