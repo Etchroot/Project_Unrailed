@@ -8,13 +8,12 @@ public class MakeTree : MonoBehaviour
     PhotonView photonView;
 
     AudioSource Audio_Source;
-    public AudioClip Tree_Clip;
 
     private void Awake()
     {
         photonView = GetComponent<PhotonView>();
         Audio_Source = GetComponent<AudioSource>();
-        Audio_Source.clip = Tree_Clip;
+        Audio_Source.clip = AudioManager.Instance.Tree;
     }
 
     public int HP

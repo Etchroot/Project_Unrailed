@@ -9,13 +9,12 @@ public class MakeRock : MonoBehaviour
     PhotonView photonView;
 
     AudioSource Audio_Source;
-    public AudioClip Rock_Clip;
 
     private void Awake()
     {
         photonView = GetComponent<PhotonView>();
         Audio_Source = GetComponent<AudioSource>();
-        Audio_Source.clip = Rock_Clip;
+        Audio_Source.clip = AudioManager.Instance.Rock;
     }
 
     public int HP
