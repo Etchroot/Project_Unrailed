@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 144583637886878367}
   - component: {fileID: 6433942313704386236}
   - component: {fileID: 3344759749906552365}
-  - component: {fileID: -8675389971626678174}
   - component: {fileID: -1605292861723385320}
   - component: {fileID: 6843594516492497443}
+  - component: {fileID: 5471401119670056211}
+  - component: {fileID: -1472099209251976262}
   m_Layer: 0
   m_Name: Rock
   m_TagString: Rock
@@ -146,6 +147,45 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.972747, y: 2.3919144, z: 3.225982}
   m_Center: {x: -0.16439569, y: 3.1823564, z: -0.044419646}
+--- !u!114 &-1605292861723385320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143736036667448170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents:
+  - {fileID: 6843594516492497443}
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
+--- !u!114 &6843594516492497443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4143736036667448170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!82 &5471401119670056211
 AudioSource:
   m_ObjectHideFlags: 0
@@ -243,7 +283,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-1605292861723385320
+--- !u!114 &-1472099209251976262
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -252,35 +292,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 4143736036667448170}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Script: {fileID: 11500000, guid: b910207b315e8b143920f7918da2b02b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  observableSearch: 2
-  ObservedComponents: []
-  sceneViewId: 0
-  InstantiationId: 0
-  isRuntimeInstantiated: 0
---- !u!114 &6843594516492497443
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4143736036667448170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
+  Ending_Canvas: {fileID: 7809243470444279538, guid: 00ff7152fd0c0144c9a54ffbae170bc8, type: 3}
+  Train:
+  - {fileID: 1679730485210250807, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
+  - {fileID: 6233768371232895993, guid: 46008fe8a9e338a489ce980cea29bb55, type: 3}
+  - {fileID: 6746710240226383061, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
+  Clear_Panel: {fileID: 0}
+  Over_Panel: {fileID: 0}
 --- !u!1 &7950536706350059028
 GameObject:
   m_ObjectHideFlags: 0

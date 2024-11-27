@@ -12,6 +12,8 @@ TagManager:
   - Rail
   - RAIL
   - Destination
+  - Train
+  - Ending_UI
   layers:
   - Default
   - TransparentFX

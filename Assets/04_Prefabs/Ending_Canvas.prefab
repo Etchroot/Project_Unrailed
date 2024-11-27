@@ -455,11 +455,11 @@ GameObject:
   - component: {fileID: 7491996050414167334}
   m_Layer: 5
   m_Name: Ending_Canvas
-  m_TagString: Untagged
+  m_TagString: Ending_UI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &9053834402888146741
 RectTransform:
   m_ObjectHideFlags: 0

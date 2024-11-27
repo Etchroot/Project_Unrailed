@@ -17,10 +17,10 @@ GameObject:
   - component: {fileID: 2665309729312889951}
   - component: {fileID: 3965355898397820079}
   - component: {fileID: 2177470396442432594}
-  - component: {fileID: 1153365969960839738}
+  - component: {fileID: 260381844033307177}
   m_Layer: 22
   m_Name: Train
-  m_TagString: Untagged
+  m_TagString: Train
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -255,21 +255,33 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &1153365969960839738
-MonoBehaviour:
+--- !u!54 &260381844033307177
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679730485210250807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b910207b315e8b143920f7918da2b02b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Ending_Canvas: {fileID: 7809243470444279538, guid: 00ff7152fd0c0144c9a54ffbae170bc8, type: 3}
-  Clear_Panel: {fileID: 0}
-  Over_Panel: {fileID: 0}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2923305898451353690
 GameObject:
   m_ObjectHideFlags: 0

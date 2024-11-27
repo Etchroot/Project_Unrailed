@@ -1,29 +1,30 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Game_Ending : MonoBehaviour
 {
-    public GameObject Ending_Canvas;
+    [SerializeField] GameObject Ending_Canvas;
+    [SerializeField] List<GameObject> Trains;
     [SerializeField] GameObject Clear_Panel;
     [SerializeField] GameObject Over_Panel;
 
     Dictionary<string, Action> Collision_Action;
-    AudioSource Ending_Sound;
-
 
     private void Awake()
     {
-        Ending_Sound = GetComponent<AudioSource>();
+        Ending_Canvas = GameObject.FindGameObjectWithTag("Ending_UI");
     }
 
     void Start()
     {
-        Ending_Canvas = GameObject.Find("Ending_Canvas");
+        //Ending_Canvas = GameObject.FindGameObjectWithTag("Ending_UI");
         Clear_Panel = Ending_Canvas.transform.GetChild(0).gameObject;
         Over_Panel = Ending_Canvas.transform.GetChild(1).gameObject;
+        Trains = GameObject.FindGameObjectsWithTag("Train").OrderBy(train => train.name).ToList();
 
         Ending_Canvas.SetActive(false);
         Clear_Panel.SetActive(false);
@@ -38,47 +39,53 @@ public class Game_Ending : MonoBehaviour
         };
     }
 
-    void Update()
+    private void OnCollisionEnter(Collision _collision)
     {
-
-    }
-
-    private void OnColliderEnter(Collision _collision)  // Clear and Over
-    {
-        string tag = _collision.gameObject.tag;
-
-        if (Collision_Action.TryGetValue(tag, out Action action))
+        if (_collision.gameObject.tag == "Train")
         {
-            action?.Invoke();
-        }
+            if (Collision_Action.TryGetValue(this.gameObject.tag, out Action action))
+            {
+                action?.Invoke();
+            }
 
-        StartCoroutine(Go_To_EndScene());
+            StartCoroutine(Go_To_EndScene());
+        }
     }
 
     public void Clear_Event()
     {
         Ending_Canvas.SetActive(true);
         Clear_Panel.SetActive(true);
-        Ending_Sound.clip = AudioManager.Instance.Clear;
-        Ending_Sound.Play();
     }
 
     public void Over_Event()
     {
         Ending_Canvas.SetActive(true);
         Over_Panel.SetActive(true);
-        Ending_Sound.clip = AudioManager.Instance.Over;
-        Ending_Sound.Play();
+
+        StartCoroutine(Destory_Train());
     }
 
     IEnumerator Go_To_EndScene()
     {
-        Debug.Log("Loading...");
+        yield return new WaitForSeconds(3.0f);
+        if (Ending_Canvas.activeSelf)
+        {
+            Ending_Canvas.SetActive(false);
+            //SceneManager.LoadScene("02_End");
+        }
+    }
 
-        yield return new WaitForSeconds(3);
+    IEnumerator Destory_Train()
+    {
+        foreach (var train in Trains)
+        {
+            if (train != null)
+            {
+                Destroy(train);
+            }
 
-        Ending_Canvas.SetActive(false);
-        Ending_Sound.Pause();
-        //SceneManager.LoadScene("02_End");
+            yield return new WaitForSeconds(1.0f);
+        }
     }
 }
