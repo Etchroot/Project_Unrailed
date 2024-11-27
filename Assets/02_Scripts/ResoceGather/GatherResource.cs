@@ -50,15 +50,18 @@ public class GatherResource : MonoBehaviour
     [PunRPC]
     void Addresource(int Rtype)
     {
-        if (Rtype == 0)
+        if (photonView.IsMine)
         {
-            numofwoodlog += countofwood;
-            Debug.Log($" Add tree 1 log");
-        }
-        else if (Rtype == 1)
-        {
-            Debug.Log($" Add Rock 1 stone");
-            numofstone += countofstone;
+            if (Rtype == 0)
+            {
+                numofwoodlog += countofwood;
+                Debug.Log($" Add tree 1 log");
+            }
+            else if (Rtype == 1)
+            {
+                Debug.Log($" Add Rock 1 stone");
+                numofstone += countofstone;
+            }
         }
     }
 
