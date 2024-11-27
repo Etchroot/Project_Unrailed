@@ -4,6 +4,7 @@ using UnityEngine;
 public class trainRod : MonoBehaviour
 {
     [SerializeField] ParticleSystem smoke1, smoke2;
+    [SerializeField] GameObject TrainSign;
     AudioSource audio_source;
     Animator anim;
     private void Awake()
@@ -23,6 +24,17 @@ public class trainRod : MonoBehaviour
         audio_source.Play();
         anim.SetTrigger("Doit");
         smoke1.Play(); smoke2.Play();
+        foreach (Transform child in TrainSign.transform)
+        {
+            if (child.gameObject.name == "Light_Green.R")
+            {
+                child.gameObject.SetActive(true);
+            }
+            else if (child.gameObject.name == "Light_Red.L")
+            {
+                child.gameObject.SetActive(false);
+            }
+        }
         App.Instance.traingo.Invoke();
     }
 
