@@ -50,12 +50,17 @@ public class TrainMove : MonoBehaviour
             TrainGo();
         };
         App.Instance.traingo += TrainGo;
+        App.Instance.traingo += Cleaner;
         //pathfollowing = StartCoroutine(TrainStart());    
         if (this.transform.name == "Train")
         {
             Audio_Source.clip = AudioManager.Instance.Train_Horn;
         }
+    }
 
+    private void Cleaner()
+    {
+        App.Instance.traingo = null;
     }
 
     [PunRPC]

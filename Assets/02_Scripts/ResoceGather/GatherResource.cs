@@ -13,27 +13,43 @@ public class GatherResource : MonoBehaviour
     int numofstone = 0;
     Coroutine ismaking = null;
     [SerializeField] StackRailroad stackRailroad;
+    GameObject target;
+    PhotonView photonView;
+
+    private void Awake()
+    {
+        photonView = GetComponent<PhotonView>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Tree"))
         {
-            //Debug.Log($" Add tree 1 log");
-            numofwoodlog += countofwood;
-            GetComponent<PhotonView>().RPC("Addresource", RpcTarget.MasterClient, other.gameObject);
+            target = other.gameObject;
+            photonView.RPC("Addresource", RpcTarget.All, 0);
         }
         if (other.CompareTag("Rock"))
         {
-            //Debug.Log($" Add Rock 1 stone");
-            numofstone += countofstone;
-            GetComponent<PhotonView>().RPC("Addresource", RpcTarget.MasterClient, other.gameObject);
+            target = other.gameObject;
+            photonView.RPC("Addresource", RpcTarget.All, 1);
         }
     }
 
     [PunRPC]
-    void Addresource(GameObject target)
+    void Addresource(int Rtype)
     {
-        PhotonNetwork.Destroy(target);
+        if (Rtype == 0)
+        {
+            numofwoodlog += countofwood;
+            Debug.Log($" Add tree 1 log");
+        }
+        else if (Rtype == 1)
+        {
+            Debug.Log($" Add Rock 1 stone");
+            numofstone += countofstone;
+        }
+        if (GetComponent<PhotonView>().IsMine)
+            PhotonNetwork.Destroy(target);
     }
 
     private void Update()
