@@ -28,22 +28,22 @@ public class GatherResource : MonoBehaviour
 
             photonView.RPC("Addresource", RpcTarget.All, 0);
             otherPhotonView = other.gameObject.GetComponent<PhotonView>();
-            if (!otherPhotonView.IsMine)
+            if (otherPhotonView.IsMine)
             {
-                otherPhotonView.RequestOwnership();
+                //otherPhotonView.RequestOwnership();
+                PhotonNetwork.Destroy(other.gameObject);
             }
-            PhotonNetwork.Destroy(other.gameObject);
         }
         if (other.CompareTag("Rock"))
         {
 
             photonView.RPC("Addresource", RpcTarget.All, 1);
             otherPhotonView = other.gameObject.GetComponent<PhotonView>();
-            if (!otherPhotonView.IsMine)
+            if (otherPhotonView.IsMine)
             {
-                otherPhotonView.RequestOwnership();
+                PhotonNetwork.Destroy(other.gameObject);
+                //otherPhotonView.RequestOwnership();
             }
-            PhotonNetwork.Destroy(other.gameObject);
         }
     }
 

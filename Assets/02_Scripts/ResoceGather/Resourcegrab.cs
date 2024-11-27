@@ -35,7 +35,7 @@ public class Resourcegrab : MonoBehaviour
     [PunRPC]
     public void Doit(int v)
     {
-        Debug.Log($" Log doit");
+        //        Debug.Log($" Log doit");
         rig.isKinematic = true;
     }
 }
