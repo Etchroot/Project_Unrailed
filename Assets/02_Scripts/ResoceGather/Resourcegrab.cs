@@ -26,6 +26,7 @@ public class Resourcegrab : MonoBehaviour
         {
             if (photonView.IsMine && !PhotonNetwork.IsMasterClient)
             {
+                rig.isKinematic = false;
                 photonView.TransferOwnership(PhotonNetwork.MasterClient);
             }
         });

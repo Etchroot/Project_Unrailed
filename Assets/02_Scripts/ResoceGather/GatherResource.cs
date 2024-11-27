@@ -13,8 +13,8 @@ public class GatherResource : MonoBehaviour
     int numofstone = 0;
     Coroutine ismaking = null;
     [SerializeField] StackRailroad stackRailroad;
-    GameObject target;
     PhotonView photonView;
+    PhotonView otherPhotonView;
 
     private void Awake()
     {
@@ -25,13 +25,25 @@ public class GatherResource : MonoBehaviour
     {
         if (other.CompareTag("Tree"))
         {
-            target = other.gameObject;
+
             photonView.RPC("Addresource", RpcTarget.All, 0);
+            otherPhotonView = other.gameObject.GetComponent<PhotonView>();
+            if (!otherPhotonView.IsMine)
+            {
+                otherPhotonView.RequestOwnership();
+            }
+            PhotonNetwork.Destroy(other.gameObject);
         }
         if (other.CompareTag("Rock"))
         {
-            target = other.gameObject;
+
             photonView.RPC("Addresource", RpcTarget.All, 1);
+            otherPhotonView = other.gameObject.GetComponent<PhotonView>();
+            if (!otherPhotonView.IsMine)
+            {
+                otherPhotonView.RequestOwnership();
+            }
+            PhotonNetwork.Destroy(other.gameObject);
         }
     }
 
@@ -48,8 +60,6 @@ public class GatherResource : MonoBehaviour
             Debug.Log($" Add Rock 1 stone");
             numofstone += countofstone;
         }
-        if (GetComponent<PhotonView>().IsMine)
-            PhotonNetwork.Destroy(target);
     }
 
     private void Update()
@@ -57,8 +67,14 @@ public class GatherResource : MonoBehaviour
         if (ismaking != null) return;
         if (numofwoodlog >= spendofwood && numofstone >= spendofstone)
         {
-            ismaking = StartCoroutine(MakeRailroad());
+            photonView.RPC("makerailroadRPC", RpcTarget.All);
         }
+    }
+
+    [PunRPC]
+    private void makerailroadRPC()
+    {
+        ismaking = StartCoroutine(MakeRailroad());
     }
 
     private IEnumerator MakeRailroad()
