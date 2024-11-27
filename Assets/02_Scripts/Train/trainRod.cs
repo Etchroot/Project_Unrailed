@@ -30,7 +30,7 @@ public class trainRod : MonoBehaviour
             {
                 child.gameObject.SetActive(true);
             }
-            else if (child.gameObject.name == "Light_Red.L")
+            if (child.gameObject.name == "Light_Red.L")
             {
                 child.gameObject.SetActive(false);
             }
