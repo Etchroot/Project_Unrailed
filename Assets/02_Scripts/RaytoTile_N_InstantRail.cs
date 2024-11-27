@@ -1,9 +1,9 @@
 using System;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.XR.Interaction.Toolkit.Inputs;
 using UnityEngine.InputSystem;
 using Photon.Pun;
+
 
 public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
 {
@@ -13,6 +13,14 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
     [SerializeField] private Button[] railButtons; // 3개의 버튼 배열
     [SerializeField] private GameObject[] railPrefabs; // 레일 프리팹 배열
     private int selectedRailIndex = -1; // 선택된 레일 종류 (-1은 선택되지 않음을 의미)
+    Quaternion tempQuaternion;
+
+    enum Railname
+    {
+        RailF,
+        RailL,
+        RailR
+    }
 
 
     public override void OnJoinedRoom()
@@ -197,87 +205,58 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 Debug.Log("0으로 서치중");
                 if (hasRailUp || hasRailDown)
                 {
-                    Instantiate(railPrefabs[0], position, Quaternion.identity);
-                    App.Instance.pathofRails.Add(0);
-
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 0, position, 0, tile);
                     App.Instance.isgrabedrail = false;
-                    tile.tag = "INSTALL";
+
                 }
                 else if (hasRailLeft || hasRailRight)
                 {
-                    Instantiate(railPrefabs[0], position, Quaternion.Euler(0f, 90f, 0f));
-                    App.Instance.pathofRails.Add(0);
-
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 0, position, 1, tile);
                     App.Instance.isgrabedrail = false;
-                    tile.tag = "INSTALL";
                 }
                 break;
             case 1:
                 if (hasRailDown)
                 {
-                    Instantiate(railPrefabs[1], position, Quaternion.identity);
-                    App.Instance.pathofRails.Add(1);
-
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 1, position, 0, tile);
                     App.Instance.isgrabedrail = false;
-                    tile.tag = "INSTALL";
                 }
                 else if (hasRailLeft)
                 {
-                    Instantiate(railPrefabs[1], position, Quaternion.Euler(0f, 90f, 0f));
-                    App.Instance.pathofRails.Add(1);
-
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 1, position, 1, tile);
                     App.Instance.isgrabedrail = false;
-                    tile.tag = "INSTALL";
                 }
                 else if (hasRailUp)
                 {
-                    Instantiate(railPrefabs[1], position, Quaternion.Euler(0f, 180f, 0f));
-                    App.Instance.pathofRails.Add(1);
-
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 1, position, 2, tile);
                     App.Instance.isgrabedrail = false;
-                    tile.tag = "INSTALL";
                 }
                 else if (hasRailRight)
                 {
-                    Instantiate(railPrefabs[1], position, Quaternion.Euler(0f, 270f, 0f));
-                    App.Instance.pathofRails.Add(1);
-
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 1, position, 3, tile);
                     App.Instance.isgrabedrail = false;
-                    tile.tag = "INSTALL";
                 }
                 break;
             case 2:
                 if (hasRailDown)
                 {
-                    Instantiate(railPrefabs[2], position, Quaternion.identity);
-                    App.Instance.pathofRails.Add(2);
-
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 2, position, 0, tile);
                     App.Instance.isgrabedrail = false;
-                    tile.tag = "INSTALL";
                 }
                 else if (hasRailLeft)
                 {
-                    Instantiate(railPrefabs[2], position, Quaternion.Euler(0f, 90f, 0f));
-                    App.Instance.pathofRails.Add(2);
-
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 2, position, 1, tile);
                     App.Instance.isgrabedrail = false;
-                    tile.tag = "INSTALL";
                 }
                 else if (hasRailUp)
                 {
-                    Instantiate(railPrefabs[2], position, Quaternion.Euler(0f, 180f, 0f));
-                    App.Instance.pathofRails.Add(2);
-
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 2, position, 2, tile);
                     App.Instance.isgrabedrail = false;
-                    tile.tag = "INSTALL";
                 }
                 else if (hasRailRight)
                 {
-                    Instantiate(railPrefabs[2], position, Quaternion.Euler(0f, 270f, 0f));
-                    App.Instance.pathofRails.Add(2);
-
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 2, position, 3, tile);
                     App.Instance.isgrabedrail = false;
-                    tile.tag = "INSTALL";
                 }
                 break;
             default:
@@ -285,6 +264,35 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 break;
 
         }
+    }
+
+    [PunRPC]
+    private void InstantRailRpc(int num, Vector3 position, int rot, GameObject tile)
+    {
+
+        switch (rot)
+        {
+            case 0:
+                tempQuaternion = Quaternion.identity;
+                break;
+            case 1:
+                tempQuaternion = Quaternion.Euler(0f, 90f, 0f);
+                break;
+            case 2:
+                tempQuaternion = Quaternion.Euler(0f, 180f, 0f);
+                break;
+            case 3:
+                tempQuaternion = Quaternion.Euler(0f, 270f, 0f);
+                break;
+            default:
+
+                break;
+        }
+
+        PhotonNetwork.Instantiate(Enum.GetName(typeof(Railname), num), position, tempQuaternion);
+        App.Instance.pathofRails.Add(num);
+
+        tile.tag = "INSTALL"; // TODO set owner
     }
     // 각 방향에 따라 설치할 레일 종류 결정
     // if (hasRailUp || hasRailDown) // 위나 아래에 레일이 있으면 상하 레일
