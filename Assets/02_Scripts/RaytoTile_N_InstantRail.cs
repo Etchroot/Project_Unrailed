@@ -205,57 +205,58 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 Debug.Log("0으로 서치중");
                 if (hasRailUp || hasRailDown)
                 {
-                    photonView.RPC("InstantRailRpc", RpcTarget.All, 0, position, 0, tile);
+
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 0, position, 0, tile.GetComponent<PhotonView>().ViewID);
                     App.Instance.isgrabedrail = false;
 
                 }
                 else if (hasRailLeft || hasRailRight)
                 {
-                    photonView.RPC("InstantRailRpc", RpcTarget.All, 0, position, 1, tile);
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 0, position, 1, tile.GetComponent<PhotonView>().ViewID);
                     App.Instance.isgrabedrail = false;
                 }
                 break;
             case 1:
                 if (hasRailDown)
                 {
-                    photonView.RPC("InstantRailRpc", RpcTarget.All, 1, position, 0, tile);
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 1, position, 0, tile.GetComponent<PhotonView>().ViewID);
                     App.Instance.isgrabedrail = false;
                 }
                 else if (hasRailLeft)
                 {
-                    photonView.RPC("InstantRailRpc", RpcTarget.All, 1, position, 1, tile);
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 1, position, 1, tile.GetComponent<PhotonView>().ViewID);
                     App.Instance.isgrabedrail = false;
                 }
                 else if (hasRailUp)
                 {
-                    photonView.RPC("InstantRailRpc", RpcTarget.All, 1, position, 2, tile);
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 1, position, 2, tile.GetComponent<PhotonView>().ViewID);
                     App.Instance.isgrabedrail = false;
                 }
                 else if (hasRailRight)
                 {
-                    photonView.RPC("InstantRailRpc", RpcTarget.All, 1, position, 3, tile);
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 1, position, 3, tile.GetComponent<PhotonView>().ViewID);
                     App.Instance.isgrabedrail = false;
                 }
                 break;
             case 2:
                 if (hasRailDown)
                 {
-                    photonView.RPC("InstantRailRpc", RpcTarget.All, 2, position, 0, tile);
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 2, position, 0, tile.GetComponent<PhotonView>().ViewID);
                     App.Instance.isgrabedrail = false;
                 }
                 else if (hasRailLeft)
                 {
-                    photonView.RPC("InstantRailRpc", RpcTarget.All, 2, position, 1, tile);
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 2, position, 1, tile.GetComponent<PhotonView>().ViewID);
                     App.Instance.isgrabedrail = false;
                 }
                 else if (hasRailUp)
                 {
-                    photonView.RPC("InstantRailRpc", RpcTarget.All, 2, position, 2, tile);
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 2, position, 2, tile.GetComponent<PhotonView>().ViewID);
                     App.Instance.isgrabedrail = false;
                 }
                 else if (hasRailRight)
                 {
-                    photonView.RPC("InstantRailRpc", RpcTarget.All, 2, position, 3, tile);
+                    photonView.RPC("InstantRailRpc", RpcTarget.All, 2, position, 3, tile.GetComponent<PhotonView>().ViewID);
                     App.Instance.isgrabedrail = false;
                 }
                 break;
@@ -267,7 +268,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
     }
 
     [PunRPC]
-    private void InstantRailRpc(int num, Vector3 position, int rot, GameObject tile)
+    private void InstantRailRpc(int num, Vector3 position, int rot, int tile)
     {
 
         switch (rot)
@@ -291,8 +292,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
 
         PhotonNetwork.Instantiate(Enum.GetName(typeof(Railname), num), position, tempQuaternion);
         App.Instance.pathofRails.Add(num);
-
-        tile.tag = "INSTALL"; // TODO set owner
+        PhotonView.Find(tile).gameObject.tag = "INSTALL";
     }
     // 각 방향에 따라 설치할 레일 종류 결정
     // if (hasRailUp || hasRailDown) // 위나 아래에 레일이 있으면 상하 레일
