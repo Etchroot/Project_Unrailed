@@ -10,6 +10,10 @@ public class trainRod : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         audio_source = GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
         audio_source.clip = AudioManager.Instance.Lever;
     }
 

@@ -36,12 +36,20 @@ public class TrainMove : MonoBehaviour
         else
         {
             Audio_Source = GetComponent<AudioSource>();
-            Audio_Source.clip = AudioManager.Instance.Train_Horn;
         }
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        if (this.transform.name != "Train")
+        {
+            return;
+        }
+        else
+        {
+            Audio_Source.clip = AudioManager.Instance.Train_Horn;
+        }
+
         endaction += () =>
         {
             endbool = false;
