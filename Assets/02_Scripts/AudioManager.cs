@@ -9,8 +9,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip Train_Horn;
     public AudioClip Train_Go;
     public AudioClip Lever;
-    public AudioClip Success;
-    public AudioClip Fail;
+    public AudioClip Clear;
+    public AudioClip Over;
 
     public static AudioManager Instance { get; private set; }
 

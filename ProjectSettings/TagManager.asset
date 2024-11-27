@@ -11,6 +11,7 @@ TagManager:
   - Lever
   - Rail
   - RAIL
+  - Destination
   layers:
   - Default
   - TransparentFX

@@ -17,6 +17,10 @@ public class StackRailroad : MonoBehaviour
     private void Awake()
     {
         Audio_Source = GetComponent<AudioSource>();
+    }
+    private void Start()
+    {
+
         Audio_Source.clip = AudioManager.Instance.Make_Rail;
     }
 
@@ -35,6 +39,11 @@ public class StackRailroad : MonoBehaviour
         Debug.Log($"{targetposition.position}");
         GameObject rail = PhotonNetwork.Instantiate("RailRoad", targetposition.position, Quaternion.identity, group: 0);
         // GameObject rail = Instantiate(railroad, targetposition.position, Quaternion.identity);
+        RailSet(rail);
+    }
+
+    private void RailSet(GameObject rail)
+    {
         rail.transform.parent = transform;
         rail.GetComponent<Rail>().Train(this);
         rail.name = railroad.name + numofrails++;
