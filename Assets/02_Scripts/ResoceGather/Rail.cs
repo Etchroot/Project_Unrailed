@@ -21,39 +21,30 @@ public class Rail : MonoBehaviour
     {
         xRGrabInteractable.selectEntered.AddListener((param1) =>
        {
+           Debug.Log($" grab");
            if (!photonView.IsMine)
            {
                photonView.RequestOwnership();
            }
-           train.TakeRail(this.gameObject);
-           rig.constraints = RigidbodyConstraints.None;
+           //    train.TakeRail(this.gameObject);
+           //    rig.constraints = RigidbodyConstraints.None;
            App.Instance.isgrabedrail = true;
-           this.gameObject.transform.parent = null;
+           PhotonNetwork.Destroy(this.gameObject);
+           //    this.gameObject.transform.parent = null;
        });
         xRGrabInteractable.selectExited.AddListener((param1) =>
         {
-            if (photonView.IsMine && !PhotonNetwork.IsMasterClient)
-            {
-                rig.isKinematic = false;
-                photonView.TransferOwnership(PhotonNetwork.MasterClient);
-            }
+            Debug.Log($" lease");
         });
 
     }
 
-    private void Grabed(SelectEnterEventArgs param1)
-    {
-        Debug.Log(param1);
-        Grabed();
-    }
+
 
     public void Train(StackRailroad stackRailroad)
     {
         train = stackRailroad;
     }
 
-    public void Grabed()
-    {
 
-    }
 }
