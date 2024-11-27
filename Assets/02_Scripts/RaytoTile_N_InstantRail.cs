@@ -58,11 +58,11 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
     /// </summary>
     private void SetButtonListeners()
     {
-        Debug.Log($"railButtons.Length :: {railButtons.Length}");
+        //Debug.Log($"railButtons.Length :: {railButtons.Length}");
         for (int i = 0; i < railButtons.Length; i++)
         {
             int index = i; // 람다 캡처 문제 방지
-            Debug.Log($"인덱스 넘버 : {index}");
+            // Debug.Log($"인덱스 넘버 : {index}");
             railButtons[i].onClick.AddListener(() => SelectRail(index));
         }
     }
@@ -116,7 +116,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                         Debug.Log("TRyPlaceRail.4");
                         Debug.Log("타일이 EMPTY 상태입니다.");
                         PlaceRail(hitInfo.collider.gameObject, hitInfo.collider.bounds.center);
-                        
+
                     }
                     else
                     {
@@ -199,7 +199,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[0], position, Quaternion.identity);
                     App.Instance.pathofRails.Add(0);
-                    
+
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -207,7 +207,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[0], position, Quaternion.Euler(0f, 90f, 0f));
                     App.Instance.pathofRails.Add(0);
-                    
+
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -217,7 +217,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[1], position, Quaternion.identity);
                     App.Instance.pathofRails.Add(1);
-                    
+
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -225,7 +225,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[1], position, Quaternion.Euler(0f, 90f, 0f));
                     App.Instance.pathofRails.Add(1);
-                    
+
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -233,7 +233,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[1], position, Quaternion.Euler(0f, 180f, 0f));
                     App.Instance.pathofRails.Add(1);
-                    
+
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -241,7 +241,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[1], position, Quaternion.Euler(0f, 270f, 0f));
                     App.Instance.pathofRails.Add(1);
-                    
+
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -251,7 +251,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[2], position, Quaternion.identity);
                     App.Instance.pathofRails.Add(2);
-                    
+
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -259,7 +259,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[2], position, Quaternion.Euler(0f, 90f, 0f));
                     App.Instance.pathofRails.Add(2);
-                    
+
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -267,7 +267,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[2], position, Quaternion.Euler(0f, 180f, 0f));
                     App.Instance.pathofRails.Add(2);
-                    
+
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
@@ -275,7 +275,7 @@ public class RaytoTile_N_InstantRail : MonoBehaviourPunCallbacks
                 {
                     Instantiate(railPrefabs[2], position, Quaternion.Euler(0f, 270f, 0f));
                     App.Instance.pathofRails.Add(2);
-                    
+
                     App.Instance.isgrabedrail = false;
                     tile.tag = "INSTALL";
                 }
