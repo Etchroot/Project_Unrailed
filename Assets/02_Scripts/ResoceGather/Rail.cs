@@ -17,6 +17,12 @@ public class Rail : MonoBehaviour
         rig = GetComponent<Rigidbody>();
         photonView = GetComponent<PhotonView>();
     }
+    private void OnEnable()
+    {
+        GameObject trans2 = GameObject.Find("Train-2");
+        this.transform.parent = trans2.transform;
+        trans2.GetComponent<StackRailroad>().LoadedRail.Add(gameObject);
+    }
     private void Start()
     {
         xRGrabInteractable.selectEntered.AddListener((param1) =>
