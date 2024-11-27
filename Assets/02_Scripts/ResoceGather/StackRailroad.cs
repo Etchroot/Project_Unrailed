@@ -23,7 +23,7 @@ public class StackRailroad : MonoBehaviour
     public void AddRail()
     {
         if (PhotonNetwork.IsMasterClient)
-            GetComponent<PhotonView>().RPC("Addrailrpc", RpcTarget.All);
+            GetComponent<PhotonView>().RPC("Addrailrpc", RpcTarget.MasterClient);
     }
     [PunRPC]
     public void Addrailrpc()
