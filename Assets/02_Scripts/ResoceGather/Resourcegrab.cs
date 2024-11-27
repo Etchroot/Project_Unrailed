@@ -1,4 +1,3 @@
-
 using Photon.Pun;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -25,7 +24,7 @@ public class Resourcegrab : MonoBehaviour
         });
         xrGrab.selectExited.AddListener((param1) =>
         {
-            if (photonView.IsMine)
+            if (photonView.IsMine && !PhotonNetwork.IsMasterClient)
             {
                 photonView.TransferOwnership(PhotonNetwork.MasterClient);
             }
