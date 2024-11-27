@@ -24,7 +24,7 @@ public class Rail : MonoBehaviour
            Debug.Log($" grab");
            if (!photonView.IsMine)
            {
-               photonView.RequestOwnership();
+               photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
            }
            //    train.TakeRail(this.gameObject);
            //    rig.constraints = RigidbodyConstraints.None;

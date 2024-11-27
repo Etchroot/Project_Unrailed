@@ -19,7 +19,7 @@ public class Resourcegrab : MonoBehaviour
         {
             if (!photonView.IsMine)
             {
-                photonView.RequestOwnership();
+                photonView.TransferOwnership(PhotonNetwork.LocalPlayer);
             }
         });
         xrGrab.selectExited.AddListener((param1) =>
