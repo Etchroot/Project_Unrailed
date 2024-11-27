@@ -1,7 +1,6 @@
 using System;
 using System.Collections.Generic;
 using Photon.Pun;
-using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
@@ -21,8 +20,13 @@ public class StackRailroad : MonoBehaviour
         Audio_Source.clip = AudioManager.Instance.Make_Rail;
     }
 
-    [PunRPC]
     public void AddRail()
+    {
+        if (PhotonNetwork.IsMasterClient)
+        GetComponent<PhotonView>().RPC("Addrailrpc", RpcTarget.All, 1);
+    }
+    [PunRPC]
+    public void Addrailrpc()
     {
         if (LoadedRail.Count > 8)
         {
@@ -41,7 +45,7 @@ public class StackRailroad : MonoBehaviour
 
     public void TakeRail(GameObject rail)
     {
-        EditorApplication.Beep();
+        //EditorApplication.Beep();
         LoadedRail.Remove(rail);
         if (targetposition.position.y > 6.21f)
         {

@@ -13,21 +13,27 @@ public class GatherResource : MonoBehaviour
     int numofstone = 0;
     Coroutine ismaking = null;
     [SerializeField] StackRailroad stackRailroad;
-    [PunRPC]
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Tree"))
         {
-            Debug.Log($" Add tree 1 log");
+            //Debug.Log($" Add tree 1 log");
             numofwoodlog += countofwood;
-            Destroy(other.gameObject);
+            GetComponent<PhotonView>().RPC("Addresource", RpcTarget.MasterClient, other.gameObject);
         }
         if (other.CompareTag("Rock"))
         {
-            Debug.Log($" Add Rock 1 stone");
+            //Debug.Log($" Add Rock 1 stone");
             numofstone += countofstone;
-            Destroy(other.gameObject);
+            GetComponent<PhotonView>().RPC("Addresource", RpcTarget.MasterClient, other.gameObject);
         }
+    }
+
+    [PunRPC]
+    void Addresource(GameObject target)
+    {
+        PhotonNetwork.Destroy(target);
     }
 
     private void Update()
@@ -45,19 +51,19 @@ public class GatherResource : MonoBehaviour
         numofwoodlog -= spendofwood;
         numofstone -= spendofstone;
         stackRailroad.AddRail();
-        Debug.Log($" add one rail , remain wood {numofwoodlog} , remain stone {numofstone}");
+        //Debug.Log($" add one rail , remain wood {numofwoodlog} , remain stone {numofstone}");
         ismaking = null;
     }
 
-    public void addwood()  // TODO Test Codes
+    public void addwood()
     {
         numofwoodlog += 3;
-        Debug.Log($" add woodLog , remain wood {numofwoodlog} , remain stone {numofstone}");
+        //Debug.Log($" add woodLog , remain wood {numofwoodlog} , remain stone {numofstone}");
     }
 
     public void addstone()
     {
         numofstone += 2;
-        Debug.Log($" add stone , remain wood {numofwoodlog} , remain stone {numofstone}");
+        //Debug.Log($" add stone , remain wood {numofwoodlog} , remain stone {numofstone}");
     }
 }

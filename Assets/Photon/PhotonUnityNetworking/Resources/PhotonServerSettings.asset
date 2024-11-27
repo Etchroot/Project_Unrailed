@@ -43,6 +43,8 @@ MonoBehaviour:
   - AddRail
   - OnTriggerEnter
   - TrainGo
+  - Addrailrpc
+  - Addresource
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1
