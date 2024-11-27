@@ -1,3 +1,4 @@
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using UnityEngine.XR.Interaction.Toolkit.Interactables;
@@ -21,6 +22,12 @@ public class Resourcegrab : MonoBehaviour
 
     private void Grabed(SelectEnterEventArgs param1)
     {
+        rig.isKinematic = true;
+    }
+    [PunRPC]
+    public void Doit(int v)
+    {
+        Debug.Log($" Log doit");
         rig.isKinematic = true;
     }
 }
