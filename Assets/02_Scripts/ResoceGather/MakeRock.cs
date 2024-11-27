@@ -31,7 +31,7 @@ public class MakeRock : MonoBehaviour
         set
         {
             hp = value;
-            Debug.Log($" {hp}");
+            //Debug.Log($" {hp}");
             if (hp <= 0 && PhotonNetwork.IsMasterClient)
 
             {

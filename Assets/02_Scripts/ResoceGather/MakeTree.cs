@@ -31,7 +31,7 @@ public class MakeTree : MonoBehaviour
         set
         {
             hp = value;
-            Debug.Log($" {hp}");
+            //Debug.Log($" {hp}");
             if (hp <= 0)
             {
                 PhotonNetwork.Instantiate("Log", this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
@@ -46,7 +46,7 @@ public class MakeTree : MonoBehaviour
     public void Doit(int v)
     {
         Audio_Source.Play();
-        Debug.Log($" [doit] tree hp is {hp}");
+        //Debug.Log($" [doit] tree hp is {hp}");
         damage(v);
 
     }
@@ -54,7 +54,7 @@ public class MakeTree : MonoBehaviour
     private void damage(int v)
     {
         hp -= v;
-        Debug.Log($" [damage] tree hp is {hp}");
+        //Debug.Log($" [damage] tree hp is {hp}");
         if (hp <= 0 && PhotonNetwork.IsMasterClient)
         {
             PhotonNetwork.Instantiate("Log", this.transform.position + Vector3.up * 2.2f, Quaternion.identity);
