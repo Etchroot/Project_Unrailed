@@ -45,6 +45,7 @@ MonoBehaviour:
   - TrainGo
   - Addrailrpc
   - Addresource
+  - makerailroadRPC
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

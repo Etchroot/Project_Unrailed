@@ -25,7 +25,6 @@ public class GatherResource : MonoBehaviour
     {
         if (other.CompareTag("Tree"))
         {
-
             photonView.RPC("Addresource", RpcTarget.All, 0);
             otherPhotonView = other.gameObject.GetComponent<PhotonView>();
             if (otherPhotonView.IsMine)
@@ -36,7 +35,6 @@ public class GatherResource : MonoBehaviour
         }
         if (other.CompareTag("Rock"))
         {
-
             photonView.RPC("Addresource", RpcTarget.All, 1);
             otherPhotonView = other.gameObject.GetComponent<PhotonView>();
             if (otherPhotonView.IsMine)
