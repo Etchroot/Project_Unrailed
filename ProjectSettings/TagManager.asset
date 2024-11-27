@@ -12,6 +12,7 @@ TagManager:
   - Rail
   - RAIL
   - Destination
+  - BLOCK
   layers:
   - Default
   - TransparentFX
