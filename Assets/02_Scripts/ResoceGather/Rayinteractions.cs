@@ -30,7 +30,7 @@ public class RayInteractorMaterialChange : MonoBehaviourPunCallbacks
                 }
                 if (item.CompareTag("Lever"))
                 {
-                    item.gameObject.GetComponent<PhotonView>()?.RPC("Doit", RpcTarget.All, 1);
+                    item.gameObject.GetComponent<PhotonView>()?.RPC("Doit", RpcTarget.All);
                 }
             }
         });

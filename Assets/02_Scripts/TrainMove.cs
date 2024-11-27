@@ -41,14 +41,7 @@ public class TrainMove : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        if (this.transform.name != "Train")
-        {
-            return;
-        }
-        else
-        {
-            Audio_Source.clip = AudioManager.Instance.Train_Horn;
-        }
+
 
         endaction += () =>
         {
@@ -58,6 +51,10 @@ public class TrainMove : MonoBehaviour
         };
         App.Instance.traingo += TrainGo;
         //pathfollowing = StartCoroutine(TrainStart());    
+        if (this.transform.name == "Train")
+        {
+            Audio_Source.clip = AudioManager.Instance.Train_Horn;
+        }
 
     }
 
