@@ -32,7 +32,7 @@ public class StackRailroad : MonoBehaviour
         {
             targetposition.position += stackposition;
         }
-        GameObject rail = PhotonNetwork.Instantiate("RailRoad", targetposition.position, Quaternion.identity);
+        GameObject rail = PhotonNetwork.Instantiate("RailRoad", targetposition.position, Quaternion.identity, group: 0);
         // GameObject rail = Instantiate(railroad, targetposition.position, Quaternion.identity);
         rail.transform.parent = transform;
         rail.GetComponent<Rail>().Train(this);
