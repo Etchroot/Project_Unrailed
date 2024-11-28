@@ -2,10 +2,11 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Photon.Pun;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Ending_Manager : MonoBehaviour
+public class Ending_Manager : MonoBehaviourPunCallbacks
 {
     [SerializeField] GameObject Ending_Canvas;
     [SerializeField] List<GameObject> Trains;
@@ -77,11 +78,16 @@ public class Ending_Manager : MonoBehaviour
         StartCoroutine(Destory_Train());
     }
 
+    public override void OnLeftRoom()
+    {
+        SceneManager.LoadScene("0_Title");
+    }
+
     IEnumerator Go_To_EndScene()
     {
         yield return new WaitForSeconds(3.0f);
 
-        SceneManager.LoadScene("0_Title");
+        PhotonNetwork.LeaveRoom();
     }
 
     IEnumerator Destory_Train()
