@@ -1,7 +1,6 @@
 using System;
 using Photon.Pun;
 using UnityEngine;
-using Photon.Pun;
 
 public class TrainMove : MonoBehaviour
 {
