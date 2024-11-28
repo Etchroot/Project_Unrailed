@@ -10,7 +10,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip Train_Go;
     public AudioClip Lever;
     public AudioClip Clear;
-    public AudioClip Over;
     public AudioClip Train_Boom;
 
     public static AudioManager Instance { get; private set; }

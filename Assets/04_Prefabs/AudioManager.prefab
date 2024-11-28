@@ -52,4 +52,4 @@ MonoBehaviour:
   Train_Go: {fileID: 8300000, guid: f05f3b47a5ce75f4d89a794f54d58dd5, type: 3}
   Lever: {fileID: 8300000, guid: 07346ecb64ea14d018811f7767ff4df5, type: 3}
   Clear: {fileID: 8300000, guid: e7a42cc6b98e8f04f854b3fec0c277b5, type: 3}
-  Over: {fileID: 8300000, guid: f9294c9fe618b4f5c9b01c3f575be618, type: 3}
+  Train_Boom: {fileID: 8300000, guid: f9294c9fe618b4f5c9b01c3f575be618, type: 3}
