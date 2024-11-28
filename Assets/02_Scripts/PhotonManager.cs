@@ -24,6 +24,12 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     [Header("Room List")]
     [SerializeField] private GameObject roomPrefab;
     [SerializeField] private Transform contenTR;
+    RoomOptions roomOptions = new RoomOptions
+    {
+        MaxPlayers = 5,
+        IsOpen = true,
+        IsVisible = true
+    };
 
 
     private void Awake()
@@ -44,12 +50,12 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
         loginButton.onClick.AddListener(() => OnLoginButtonClick());
         makeRoomButton.onClick.AddListener(() => OnMakeRoomButtonClick());
-        OptionButton.onClick.AddListener(() => VisibleOption());
-    }
-
-    private void VisibleOption()
-    {
-        throw new System.NotImplementedException();
+        // OptionButton.onClick.AddListener(() => VisibleOption());
+        nickNameIF.onValueChanged.AddListener((Inputtext) =>
+        {
+            nickname = Inputtext;
+            Debug.Log($" nick is {nickname}");
+        });
     }
 
 
@@ -65,12 +71,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
         {
             roomNameIF.text = $"ROOM_{Random.Range(0, 1000)}";
         }
-        var roomOptions = new RoomOptions
-        {
-            MaxPlayers = 2,
-            IsOpen = true,
-            IsVisible = true
-        };
+
         PhotonNetwork.CreateRoom(roomNameIF.text, roomOptions);
     }
     private void SetNickNam()
@@ -110,7 +111,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.IsMasterClient)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene("1_Game");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Test_stage1");
         }
     }
     #endregion
