@@ -7,11 +7,17 @@ using UnityEngine.Timeline;
 public class MoveRight : MonoBehaviour
 {
     private bool isCoroutineRunning = false; // 코루틴이 실행중인지 확인하는 변수
-    //[SerializeField] private float TrainSpeed = 2f; // 초당 이동 속도
-    //[SerializeField] private float radius = 3f; // 원의 반지름
-    //[SerializeField] private float rotationduration = 2f; // 회전 시간
-    //[SerializeField] private float fwspeed = 3f; // 전진 속도
-    [SerializeField] private float duration = 3f; // 지속시간
+                                             //[SerializeField] private float TrainSpeed = 2f; // 초당 이동 속도
+                                             //[SerializeField] private float radius = 3f; // 원의 반지름
+                                             //[SerializeField] private float rotationduration = 2f; // 회전 시간
+                                             //[SerializeField] private float fwspeed = 3f; // 전진 속도
+                                             //[SerializeField] private float duration = 3f; // 지속시간
+    private float transpeedR;
+
+    private void OnEnable()
+    {
+        transpeedR = App.Instance.TrainSpeedR;
+    }
 
     public void GoRight(Action endaction)
     {
@@ -41,7 +47,7 @@ public class MoveRight : MonoBehaviour
             Vector3 t5 = Vector3.Lerp(t2, t3, time);
             transform.position = Vector3.Lerp(t4, t5, time);
 
-            time += Time.deltaTime / duration;
+            time += Time.deltaTime / transpeedR;
 
             yield return null;
         }
@@ -78,10 +84,10 @@ public class MoveRight : MonoBehaviour
         Quaternion startRotation = transform.rotation;
         Quaternion endRotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y + 90, 0); //오른쪽 90도  
 
-        while (elapsedtime < duration)
+        while (elapsedtime < transpeedR)
         {
             elapsedtime += Time.deltaTime;
-            transform.rotation = Quaternion.Slerp(startRotation, endRotation, elapsedtime / duration);
+            transform.rotation = Quaternion.Slerp(startRotation, endRotation, elapsedtime / transpeedR);
             yield return null;
         }
         transform.rotation = endRotation;

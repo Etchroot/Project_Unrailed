@@ -1,8 +1,6 @@
 using System;
-using System.Collections;
 using Photon.Pun;
 using UnityEngine;
-using UnityEngine.Timeline;
 using Photon.Pun;
 
 public class TrainMove : MonoBehaviour

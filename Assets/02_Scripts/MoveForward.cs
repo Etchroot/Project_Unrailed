@@ -9,9 +9,14 @@ using UnityEngine.Timeline;
 public class MoveForward : MonoBehaviour
 {
     private bool isCoroutineRunning = false; // 코루틴이 실행중인지 확인하는 변수
-    public float TrainSpeed = 1f; // 초당 이동 속도
+    //public float TrainSpeed = 1f; // 초당 이동 속도
     private Vector3 destination; // 목표 위치\
     //private Vector3 currdes;
+    private float TrainSpeedF;
+    private void OnEnable()
+    {
+        TrainSpeedF = App.Instance.TrainSpeedF;
+    }
 
 
     public void GoForward(Action endaction)
@@ -31,7 +36,7 @@ public class MoveForward : MonoBehaviour
         destination = transform.position + transform.forward * 6;
         while (Vector3.Distance(transform.position, destination) > 0.01)
         {
-            transform.position = Vector3.MoveTowards(transform.position, destination, TrainSpeed * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, destination, TrainSpeedF * Time.deltaTime);
             yield return null;
         }
         transform.position = destination;
