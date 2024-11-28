@@ -14,6 +14,7 @@ TagManager:
   - Destination
   - Train
   - Ending_UI
+  - BLOCK
   layers:
   - Default
   - TransparentFX

@@ -8,7 +8,7 @@ public class StackRailroad : MonoBehaviour
 {
     [SerializeField] GameObject railroad;
     [SerializeField] Transform targetposition;
-    List<GameObject> LoadedRail = new();
+    public List<GameObject> LoadedRail = new();
     Transform spawnpoint;
     Vector3 stackposition = new Vector3(0, 0.18f, 0);
     int numofrails = 0;
@@ -17,6 +17,10 @@ public class StackRailroad : MonoBehaviour
     private void Awake()
     {
         Audio_Source = GetComponent<AudioSource>();
+    }
+    private void Start()
+    {
+
         Audio_Source.clip = AudioManager.Instance.Make_Rail;
     }
 
@@ -32,11 +36,17 @@ public class StackRailroad : MonoBehaviour
         {
             targetposition.position += stackposition;
         }
+        Debug.Log($"{targetposition.position}");
         GameObject rail = PhotonNetwork.Instantiate("RailRoad", targetposition.position, Quaternion.identity, group: 0);
         // GameObject rail = Instantiate(railroad, targetposition.position, Quaternion.identity);
+        //RailSet(rail);
+    }
+
+    private void RailSet(GameObject rail)
+    {
         rail.transform.parent = transform;
         rail.GetComponent<Rail>().Train(this);
-        rail.name = railroad.name + numofrails++;
+        //rail.name = railroad.name + numofrails++;
 
         LoadedRail.Add(rail);
 
