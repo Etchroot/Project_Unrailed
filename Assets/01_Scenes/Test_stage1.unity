@@ -990,9 +990,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 154895147691181357, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
+      propertyPath: m_Size.y
+      value: 1.3215563
+      objectReference: {fileID: 0}
+    - target: {fileID: 154895147691181357, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
+      propertyPath: m_Center.y
+      value: 2.6748295
+      objectReference: {fileID: 0}
     - target: {fileID: 2642770275004575175, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
       propertyPath: sceneViewId
-      value: 263
+      value: 149
       objectReference: {fileID: 0}
     - target: {fileID: 4775539426459617878, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7279,7 +7287,7 @@ MonoBehaviour:
   m_AimTargetObject: {fileID: 0}
   m_PhysicsLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 16777217
   m_PhysicsTriggerInteraction: 1
   m_CastRadius: 0.1
 --- !u!4 &421722242462941062
@@ -8052,7 +8060,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 15728695
+    m_Bits: 32505911
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -10282,7 +10290,7 @@ MonoBehaviour:
   m_AimTargetObject: {fileID: 992238012352389421}
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 2147483681
+    m_Bits: 16777249
   m_RaycastTriggerInteraction: 1
   m_RaycastSnapVolumeInteraction: 1
   m_TargetNumCurveSegments: 1
@@ -10451,7 +10459,7 @@ MonoBehaviour:
   m_AimTargetObject: {fileID: 6971696765354856149}
   m_RaycastMask:
     serializedVersion: 2
-    m_Bits: 2147483681
+    m_Bits: 16777249
   m_RaycastTriggerInteraction: 1
   m_RaycastSnapVolumeInteraction: 1
   m_TargetNumCurveSegments: 1
@@ -10777,7 +10785,7 @@ MonoBehaviour:
   m_AimTargetObject: {fileID: 0}
   m_PhysicsLayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 16777217
   m_PhysicsTriggerInteraction: 1
   m_CastRadius: 0.1
 --- !u!224 &5818137432718278447
@@ -12836,7 +12844,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 7fc28ce420950944b9b2c3155a4dd8c2, type: 3}
   m_Resource: {fileID: 8300000, guid: 7fc28ce420950944b9b2c3155a4dd8c2, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.5
   m_Pitch: 1
   Loop: 1
   Mute: 0

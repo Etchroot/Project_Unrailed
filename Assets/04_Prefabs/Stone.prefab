@@ -13,6 +13,10 @@ PrefabInstance:
       value: Stone
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: c09e3e597335e4c6c95a17ac8684e251, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: c09e3e597335e4c6c95a17ac8684e251, type: 3}
       propertyPath: m_TagString
       value: Rock
       objectReference: {fileID: 0}
