@@ -3,6 +3,7 @@ using Photon.Pun;
 using Photon.Realtime;
 using TMPro;
 using UnityEngine.UI;
+using Photon.Pun.UtilityScripts;
 
 
 public class PhotonManager : MonoBehaviourPunCallbacks
@@ -11,6 +12,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     [SerializeField] private const string version = "1.0";
 
     private string nickname = "Cha";
+    private bool Masterconnect = false;
 
     [Header("Text")]
     [SerializeField] private TMP_InputField nickNameIF;
@@ -62,7 +64,10 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     private void OnLoginButtonClick()
     {
         //SetNickNam();
-        PhotonNetwork.JoinRandomRoom();
+        if (Masterconnect)
+            PhotonNetwork.JoinRandomOrCreateRoom();
+        else
+            Debug.Log("아직 마스터서버에 연결되지 않았습니다.");
     }
     private void OnMakeRoomButtonClick()
     {
@@ -93,6 +98,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     public override void OnConnectedToMaster()
     {
         PhotonNetwork.JoinLobby();
+        Masterconnect = true;
     }
 
     public override void OnJoinedLobby()

@@ -6173,7 +6173,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 24
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -6838,7 +6838,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 24
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -7298,7 +7298,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1408496533913228393, guid: 44d07597f543f224da05f56447db1b63, type: 3}
       propertyPath: MaxDistance
-      value: 24
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 1408496533913228393, guid: 44d07597f543f224da05f56447db1b63, type: 3}
+      propertyPath: rolloffMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1408496533913228393, guid: 44d07597f543f224da05f56447db1b63, type: 3}
       propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
@@ -12676,7 +12680,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 24
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
