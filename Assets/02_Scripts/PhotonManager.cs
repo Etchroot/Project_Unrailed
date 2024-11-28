@@ -62,7 +62,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     private void OnLoginButtonClick()
     {
         //SetNickNam();
-        PhotonNetwork.JoinRandomRoom();
+        PhotonNetwork.JoinRandomOrCreateRoom();
     }
     private void OnMakeRoomButtonClick()
     {
