@@ -13,6 +13,8 @@ public class Ending_Manager : MonoBehaviourPunCallbacks
     [SerializeField] GameObject Clear_Panel;
     [SerializeField] GameObject Over_Panel;
 
+    AudioSource audio_Source;
+
     Dictionary<string, Action> Collision_Action;
 
     public static Ending_Manager Instance { get; private set; }
@@ -29,6 +31,7 @@ public class Ending_Manager : MonoBehaviourPunCallbacks
         DontDestroyOnLoad(gameObject);
 
         Ending_Canvas = GameObject.FindGameObjectWithTag("Ending_UI");
+        audio_Source = GetComponent<AudioSource>();
     }
 
     void Start()
@@ -67,6 +70,8 @@ public class Ending_Manager : MonoBehaviourPunCallbacks
         Ending_Canvas.SetActive(true);
         Clear_Panel.SetActive(true);
 
+        audio_Source.clip = AudioManager.Instance.Clear;
+        audio_Source.Play();
         StartCoroutine(Destory_Train());
     }
 
@@ -75,6 +80,8 @@ public class Ending_Manager : MonoBehaviourPunCallbacks
         Ending_Canvas.SetActive(true);
         Over_Panel.SetActive(true);
 
+        audio_Source.clip = AudioManager.Instance.Train_Boom;
+        audio_Source.Play();
         StartCoroutine(Destory_Train());
     }
 
@@ -88,6 +95,7 @@ public class Ending_Manager : MonoBehaviourPunCallbacks
         yield return new WaitForSeconds(3.0f);
 
         PhotonNetwork.LeaveRoom();
+        audio_Source.Pause();
     }
 
     IEnumerator Destory_Train()
