@@ -7,7 +7,7 @@ using System.Collections;
 
 public class LobbyUI : MonoBehaviour
 {
-    public GameObject buttons; // Button1, Button2, Button3
+    public Button buttons; // Button1, Button2, Button3
     public InputActionReference navigateAction; // 오른쪽 스틱 입력을 받는 액션
     public InputActionReference selectAction;   // 선택 버튼 입력을 받는 액션
     private int currentIndex = 0; // 현재 선택된 버튼 인덱스
@@ -66,7 +66,7 @@ public class LobbyUI : MonoBehaviour
     private void OnSelect(InputAction.CallbackContext context)
     {
         Debug.Log("버튼 클릭함");
-        buttons.GetComponent<Button>().onClick.Invoke(); // 버튼 클릭
+        buttons.onClick.Invoke(); // 버튼 클릭
     }
 
     // IEnumerator DelayCRT()
