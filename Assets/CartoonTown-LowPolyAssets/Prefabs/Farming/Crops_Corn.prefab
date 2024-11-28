@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 3316912}
   - component: {fileID: 2328458}
   - component: {fileID: 5365406516262869346}
+  - component: {fileID: 6864556256771040886}
   m_Layer: 0
   m_Name: Crops_Corn
   m_TagString: BLOCK
@@ -29,8 +30,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -108,3 +109,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 2.5226798, y: 1.4249781, z: 2.4861887}
   m_Center: {x: -0.0034430623, y: 0.7121474, z: 0.0073598623}
+--- !u!114 &6864556256771040886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 102898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d168ea65db80084a95b131abb7ef9e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

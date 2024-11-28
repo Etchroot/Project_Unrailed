@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 3391458}
   - component: {fileID: 2370558}
   - component: {fileID: 7541180061844308554}
+  - component: {fileID: 6956983589408131915}
+  - component: {fileID: 8581276292964517290}
   m_Layer: 0
   m_Name: Cat_Tiger
   m_TagString: BLOCK
@@ -108,3 +110,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.4966302, y: 0.7457769, z: 0.50086564}
   m_Center: {x: 0.04143539, y: 0.37139046, z: 0.021246918}
+--- !u!95 &6956983589408131915
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109588}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 03375675f8df84de8bb08dbb65cf9571, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &8581276292964517290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 109588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d168ea65db80084a95b131abb7ef9e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

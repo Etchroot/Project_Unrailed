@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2885254905713537139}
   - component: {fileID: -4004934889147991143}
   - component: {fileID: 8943496768583018301}
-  - component: {fileID: 8882788100405472463}
+  - component: {fileID: -7194989134518945155}
   m_Layer: 0
   m_Name: tree
   m_TagString: Tree
@@ -283,7 +283,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &8882788100405472463
+--- !u!114 &-7194989134518945155
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,16 +292,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 2367201757911111581}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b910207b315e8b143920f7918da2b02b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d168ea65db80084a95b131abb7ef9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ending_Canvas: {fileID: 7809243470444279538, guid: 00ff7152fd0c0144c9a54ffbae170bc8, type: 3}
-  Train:
-  - {fileID: 1679730485210250807, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
-  - {fileID: 6233768371232895993, guid: 46008fe8a9e338a489ce980cea29bb55, type: 3}
-  - {fileID: 6746710240226383061, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
-  Clear_Panel: {fileID: 0}
-  Over_Panel: {fileID: 0}
 --- !u!1 &3697412557086764832
 GameObject:
   m_ObjectHideFlags: 0

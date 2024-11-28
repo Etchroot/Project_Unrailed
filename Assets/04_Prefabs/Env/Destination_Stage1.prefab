@@ -44,10 +44,10 @@ GameObject:
   - component: {fileID: 7262869301417825479}
   - component: {fileID: 4219886799593507707}
   - component: {fileID: 140081958011889753}
-  - component: {fileID: 7880020926660171315}
+  - component: {fileID: 5320830638957106515}
   m_Layer: 31
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Destination
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,9 +139,9 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7880020926660171315
+  m_Size: {x: 1, y: 2.9205437, z: 1}
+  m_Center: {x: 0, y: 0.96027184, z: 0}
+--- !u!114 &5320830638957106515
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -150,10 +150,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1485978347033094987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b910207b315e8b143920f7918da2b02b, type: 3}
+  m_Script: {fileID: 11500000, guid: 7d168ea65db80084a95b131abb7ef9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ending_Canvas: {fileID: 7809243470444279538, guid: 00ff7152fd0c0144c9a54ffbae170bc8, type: 3}
-  Trains: []
-  Clear_Panel: {fileID: 0}
-  Over_Panel: {fileID: 0}
