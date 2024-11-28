@@ -12,7 +12,7 @@ public class TrainMove : MonoBehaviour
 
     public Action endaction;
     public GameObject DestroyEffect;
-    public GameObject EndingCavas;
+    //public GameObject EndingCavas;
     private bool endbool;
     MoveForward moveForward;
     MoveLeft moveLeft;

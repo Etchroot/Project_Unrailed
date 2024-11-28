@@ -874,7 +874,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3965355898397820079, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
       propertyPath: sceneViewId
-      value: 262
+      value: 261
       objectReference: {fileID: 0}
     - target: {fileID: 5228209713559796469, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -916,8 +916,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1888995263645853501, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
+    - target: {fileID: 6294159799266080347, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
+      propertyPath: EndingCavas
+      value: 
+      objectReference: {fileID: 735853219}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -932,8 +935,12 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2285975990275025679, guid: 46008fe8a9e338a489ce980cea29bb55, type: 3}
       propertyPath: sceneViewId
-      value: 261
+      value: 149
       objectReference: {fileID: 0}
+    - target: {fileID: 2615754874175158886, guid: 46008fe8a9e338a489ce980cea29bb55, type: 3}
+      propertyPath: EndingCavas
+      value: 
+      objectReference: {fileID: 735853219}
     - target: {fileID: 4344520578706854904, guid: 46008fe8a9e338a489ce980cea29bb55, type: 3}
       propertyPath: stackRailroad
       value: 
@@ -995,17 +1002,13 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 154895147691181357, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
-      propertyPath: m_Size.y
-      value: 1.3215563
-      objectReference: {fileID: 0}
-    - target: {fileID: 154895147691181357, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
-      propertyPath: m_Center.y
-      value: 2.6748295
-      objectReference: {fileID: 0}
+    - target: {fileID: 233140362229179353, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
+      propertyPath: EndingCavas
+      value: 
+      objectReference: {fileID: 735853219}
     - target: {fileID: 2642770275004575175, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
       propertyPath: sceneViewId
-      value: 149
+      value: 262
       objectReference: {fileID: 0}
     - target: {fileID: 4775539426459617878, guid: 04ffa3eb34a940e46b7303f461c8d8bb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1308,6 +1311,11 @@ PrefabInstance:
 --- !u!224 &735853218 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 9053834402888146741, guid: 00ff7152fd0c0144c9a54ffbae170bc8, type: 3}
+  m_PrefabInstance: {fileID: 735853217}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &735853219 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7809243470444279538, guid: 00ff7152fd0c0144c9a54ffbae170bc8, type: 3}
   m_PrefabInstance: {fileID: 735853217}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &748067753
@@ -5115,12 +5123,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dev: 1
   rightnearFarInteractor: {fileID: 0}
-  pathofRails: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+  pathofRails: 000000000000000000000000
   isgrabedrail: 0
   transpeedf_Dev: 12
   transpeedr_Dev: 0.5
-  transpeedf_test: 3
-  transpeedr_test: 2
+  transpeedf_test: 1.5
+  transpeedr_test: 1
 --- !u!4 &1037487475
 Transform:
   m_ObjectHideFlags: 0
@@ -9215,7 +9223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Mediator: {fileID: 7564042440467593792}
   m_TransformationPriority: 0
-  m_MoveSpeed: 7
+  m_MoveSpeed: 8
   m_EnableStrafe: 0
   m_EnableFly: 0
   m_UseGravity: 1

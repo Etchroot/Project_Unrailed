@@ -19,7 +19,6 @@ GameObject:
   - component: {fileID: 2177470396442432594}
   - component: {fileID: 260381844033307177}
   - component: {fileID: 5077007799352496661}
-  - component: {fileID: 1888995263645853501}
   m_Layer: 22
   m_Name: Train
   m_TagString: Train
@@ -284,18 +283,6 @@ Rigidbody:
   m_Constraints: 0
   m_CollisionDetection: 0
 --- !u!114 &5077007799352496661
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1679730485210250807}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6a0e163442c5fd44915ffa360fb01fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1888995263645853501
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
