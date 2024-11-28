@@ -10,8 +10,11 @@ public class RayInteractorMaterialChange : MonoBehaviourPunCallbacks
     public NearFarInteractor nearFarInteractor;  // XRRay Interactor (Ray를 쏘는 역할)    
 
     // Ray가 물체를 가리키고 있는지 체크하는 함수
-    public override void OnJoinedRoom()
+    // public override void OnJoinedRoom()
+    private void Start()
     {
+
+
         //nearFarInteractor = App.Instance.rightnearFarInteractor;
         nearFarInteractor.selectEntered.AddListener((param1) =>
         {
