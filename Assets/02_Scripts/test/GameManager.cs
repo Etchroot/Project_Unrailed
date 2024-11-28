@@ -24,9 +24,9 @@ public class GameManager : MonoBehaviourPunCallbacks
 
     }
 
-    void start()
+    void Start()
     {
-        Vector3 pos = new Vector3(Random.Range(61, 62), 3.2f, Random.Range(2, 6));
+        Vector3 pos = new Vector3(Random.Range(34, 44), 3.2f, Random.Range(9, 26));
         player = PhotonNetwork.Instantiate("VrPlyaer", pos, transform.rotation, 0);
         xrorigin.transform.position = pos;
         xrorigin.transform.rotation = transform.rotation;
