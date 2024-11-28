@@ -71,7 +71,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d64188d9fcf4c48bdf2f6885e66f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrainSpeed: 3
 --- !u!114 &1220828899773719355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +83,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab230397ec732204e9a3d894e362fbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2
 --- !u!114 &1524011050668310750
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +95,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c75b41635a5fc42bf93ab81cf3d056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2
 --- !u!114 &4344520578706854904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,7 +122,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 16777216
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 12582912

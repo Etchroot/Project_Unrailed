@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/01_Scenes/1_Game.unity
     guid: 6bad6f159d691d640985d06c89a94db9
+  - enabled: 1
+    path: Assets/01_Scenes/Test_stage1.unity
+    guid: 860acc277cba356419972a78dea3900c
+  - enabled: 1
+    path: Assets/01_Scenes/Test_YSW.unity
+    guid: 156c97cae4ee83246a79f197b1b6cd54
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 763ba916ac52f7d4694182264e9c00d7, type: 2}

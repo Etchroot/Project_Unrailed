@@ -104,7 +104,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28d64188d9fcf4c48bdf2f6885e66f76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TrainSpeed: 3
 --- !u!114 &6749155243253215869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,7 +116,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab230397ec732204e9a3d894e362fbc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2
 --- !u!114 &-5806295147630082761
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,7 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99c75b41635a5fc42bf93ab81cf3d056, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  duration: 2
 --- !u!114 &5348569393767782937
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +142,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   railroad: {fileID: 2161973664557369212, guid: 5afd40a2fe0b47e4cbb6501eb965d137, type: 3}
   targetposition: {fileID: 2436730138878208169}
+  LoadedRail: []
 --- !u!65 &154895147691181357
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -164,8 +162,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2.492713, y: 0.26931334, z: 5.0402884}
-  m_Center: {x: -0.019905567, y: 3.2009509, z: -0.069660425}
+  m_Size: {x: 2.492713, y: 1.1645396, z: 5.0402884}
+  m_Center: {x: -0.019905567, y: 2.7533379, z: -0.069660425}
 --- !u!82 &-1514328657405935026
 AudioSource:
   m_ObjectHideFlags: 0

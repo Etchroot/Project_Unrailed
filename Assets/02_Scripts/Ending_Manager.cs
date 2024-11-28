@@ -61,25 +61,12 @@ public class Ending_Manager : MonoBehaviour
         }
     }
 
-    /*private void OnCollisionEnter(Collision _collision)
-    {
-        if (_collision.collider.CompareTag("Train"))
-        {
-            if (Collision_Action.TryGetValue(this.gameObject.tag, out Action action))
-            {
-                action?.Invoke();
-            }
-
-            StartCoroutine(Go_To_EndScene());
-        }
-    }*/
-
     public void Clear_Event()
     {
         Ending_Canvas.SetActive(true);
         Clear_Panel.SetActive(true);
 
-        StartCoroutine(Destory_Train()); // 임시
+        StartCoroutine(Destory_Train());
     }
 
     public void Over_Event()
@@ -93,11 +80,8 @@ public class Ending_Manager : MonoBehaviour
     IEnumerator Go_To_EndScene()
     {
         yield return new WaitForSeconds(3.0f);
-        if (Ending_Canvas.activeSelf)
-        {
-            Ending_Canvas.SetActive(false);
-            //SceneManager.LoadScene("02_End");
-        }
+
+        SceneManager.LoadScene("0_Title");
     }
 
     IEnumerator Destory_Train()

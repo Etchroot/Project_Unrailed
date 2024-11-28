@@ -13,6 +13,10 @@ PrefabInstance:
       value: Trunk
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: bea0359f782544918b565d636b877b6f, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: bea0359f782544918b565d636b877b6f, type: 3}
       propertyPath: m_TagString
       value: Tree
       objectReference: {fileID: 0}
@@ -285,7 +289,8 @@ MonoBehaviour:
   Synchronization: 3
   OwnershipTransfer: 0
   observableSearch: 2
-  ObservedComponents: []
+  ObservedComponents:
+  - {fileID: 5717455163256638098}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
