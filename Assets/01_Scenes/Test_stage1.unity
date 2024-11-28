@@ -916,7 +916,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1888995263645853501, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5114,7 +5115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dev: 1
   rightnearFarInteractor: {fileID: 0}
-  pathofRails: 000000000000000000000000
+  pathofRails: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   isgrabedrail: 0
   transpeedf_Dev: 12
   transpeedr_Dev: 0.5

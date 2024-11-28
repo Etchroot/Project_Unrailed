@@ -37,12 +37,10 @@ public class SelectRail : MonoBehaviour
             if (input.x > 0.8f) // 스틱을 오른쪽으로 움직였을 때
             {
                 UpdateSelection(1); // 오른쪽으로 이동
-
             }
             else if (input.x < -0.8f) // 스틱을 왼쪽으로 움직였을 때
             {
                 UpdateSelection(-1); // 왼쪽으로 이동
-
             }
 
 

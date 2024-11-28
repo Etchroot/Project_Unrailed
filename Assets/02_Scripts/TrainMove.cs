@@ -1,5 +1,6 @@
 using System;
 using Photon.Pun;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class TrainMove : MonoBehaviour
@@ -8,7 +9,10 @@ public class TrainMove : MonoBehaviour
     [SerializeField] GameObject TrainHead;
     [SerializeField] GameObject CraftingBox;
     [SerializeField] GameObject Storage;
+
     public Action endaction;
+    public GameObject DestroyEffect;
+    public GameObject EndingCavas;
     private bool endbool;
     MoveForward moveForward;
     MoveLeft moveLeft;
@@ -103,6 +107,34 @@ public class TrainMove : MonoBehaviour
             Audio_Source.Play();
         }
     }
+    void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("BLOCK"))
+        {
+            Instantiate(DestroyEffect, new Vector3(transform.position.x, transform.position.y + 5, transform.position.z), Quaternion.identity);
+            Destroy(this.gameObject);
+            // Invoke("ActiveEnding", 3f);
+        }
+        if (collision.gameObject.CompareTag("Rock"))
+        {
+            Instantiate(DestroyEffect, new Vector3(transform.position.x, transform.position.y + 5, transform.position.z), Quaternion.identity);
+            Destroy(this.gameObject);
+            // Invoke("ActiveEnding", 3f);
+        }
+        if (collision.gameObject.CompareTag("Tree"))
+        {
+            Instantiate(DestroyEffect, new Vector3(transform.position.x, transform.position.y + 5, transform.position.z), Quaternion.identity);
+            Destroy(this.gameObject);
+            // Invoke("ActiveEnding", 3f);
+        }
+
+
+    }
+
+    // void ActiveEnding()
+    // {
+    //     EndingCavas.SetActive(true);
+    // }
 
     public void Setting_Audio()
     {

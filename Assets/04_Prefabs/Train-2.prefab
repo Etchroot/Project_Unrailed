@@ -56,6 +56,8 @@ MonoBehaviour:
   TrainHead: {fileID: 0}
   CraftingBox: {fileID: 0}
   Storage: {fileID: 0}
+  DestroyEffect: {fileID: 2433282508537954060, guid: 3ef3ae421f71c5c4e97fe12dc2fc6312, type: 3}
+  EndingCavas: {fileID: 0}
   numoftrain: 1
   Audio_Source: {fileID: 0}
   Train1: {fileID: 0}
