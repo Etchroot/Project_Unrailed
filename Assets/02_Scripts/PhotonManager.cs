@@ -4,6 +4,7 @@ using Photon.Realtime;
 using TMPro;
 using UnityEngine.UI;
 using Photon.Pun.UtilityScripts;
+using Unity.VisualScripting;
 
 
 public class PhotonManager : MonoBehaviourPunCallbacks
@@ -13,6 +14,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
 
     private string nickname = "Cha";
     private bool Masterconnect = false;
+    public GameObject waitamoment;
 
     [Header("Text")]
     [SerializeField] private TMP_InputField nickNameIF;
@@ -99,6 +101,7 @@ public class PhotonManager : MonoBehaviourPunCallbacks
     {
         PhotonNetwork.JoinLobby();
         Masterconnect = true;
+        waitamoment.SetActive(false);
     }
 
     public override void OnJoinedLobby()

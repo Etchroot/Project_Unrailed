@@ -19,7 +19,7 @@ public class Rail : MonoBehaviour
     }
     private void OnEnable()
     {
-        GameObject trans2 = GameObject.Find("Train-2");
+        GameObject trans2 = GameObject.Find("Train-3");
         this.transform.parent = trans2.transform;
         trans2.GetComponent<StackRailroad>().LoadedRail.Add(gameObject);
     }

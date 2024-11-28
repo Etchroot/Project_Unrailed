@@ -539,6 +539,10 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 260
       objectReference: {fileID: 0}
+    - target: {fileID: 7917727911185673238, guid: f83f9dce86240be4d9f9f84c42921487, type: 3}
+      propertyPath: m_InteractionLayers.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8037990400392430312, guid: f83f9dce86240be4d9f9f84c42921487, type: 3}
       propertyPath: sceneViewId
       value: 189
@@ -912,7 +916,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1888995263645853501, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -5110,7 +5115,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dev: 1
   rightnearFarInteractor: {fileID: 0}
-  pathofRails: 000000000000000000000000
+  pathofRails: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
   isgrabedrail: 0
   transpeedf_Dev: 12
   transpeedr_Dev: 0.5
@@ -6911,37 +6916,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &2129848550
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2129848551}
-  m_Layer: 0
-  m_Name: GameObject (1)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2129848551
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2129848550}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 44.64, y: 3.64, z: 26.08}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &17684083475092692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7435,7 +7409,7 @@ MonoBehaviour:
   m_AimTargetObject: {fileID: 0}
   m_PhysicsLayerMask:
     serializedVersion: 2
-    m_Bits: 16777217
+    m_Bits: 1
   m_PhysicsTriggerInteraction: 1
   m_CastRadius: 0.1
 --- !u!4 &421722242462941062
@@ -13159,4 +13133,3 @@ SceneRoots:
   - {fileID: 2017818801}
   - {fileID: 374372039584188980}
   - {fileID: 1209232270}
-  - {fileID: 2129848551}
