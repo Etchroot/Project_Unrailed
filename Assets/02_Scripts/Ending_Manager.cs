@@ -90,6 +90,10 @@ public class Ending_Manager : MonoBehaviourPunCallbacks
         SceneManager.LoadScene("0_Title");
     }
 
+    public void Go_EndScene(){
+        StartCoroutine(Go_To_EndScene());
+    }
+
     IEnumerator Go_To_EndScene()
     {
         yield return new WaitForSeconds(3.0f);
