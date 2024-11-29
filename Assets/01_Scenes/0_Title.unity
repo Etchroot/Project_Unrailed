@@ -1820,14 +1820,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9afb245eda40d488d793d0ec13c738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dev: 1
+  dev: 0
   rightnearFarInteractor: {fileID: 0}
-  pathofRails: 
+  pathofRails: 000000000000000000000000
   isgrabedrail: 0
   transpeedf_Dev: 12
   transpeedr_Dev: 0.5
-  transpeedf_test: 3
-  transpeedr_test: 2
+  transpeedf_test: 1
+  transpeedr_test: 6
 --- !u!4 &745824779
 Transform:
   m_ObjectHideFlags: 0

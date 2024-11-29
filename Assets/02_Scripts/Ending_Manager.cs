@@ -72,7 +72,7 @@ public class Ending_Manager : MonoBehaviourPunCallbacks
 
         audio_Source.clip = AudioManager.Instance.Clear;
         audio_Source.Play();
-        StartCoroutine(Destory_Train());
+        //StartCoroutine(Destory_Train());
     }
 
     public void Over_Event()
@@ -88,6 +88,10 @@ public class Ending_Manager : MonoBehaviourPunCallbacks
     public override void OnLeftRoom()
     {
         SceneManager.LoadScene("0_Title");
+    }
+
+    public void Go_EndScene(){
+        StartCoroutine(Go_To_EndScene());
     }
 
     IEnumerator Go_To_EndScene()

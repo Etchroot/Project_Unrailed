@@ -72,6 +72,8 @@ public class TrainMove : MonoBehaviour
             Debug.Log($" waring end of rail");
             Instantiate(DestroyEffect, new Vector3(transform.position.x, transform.position.y + 5, transform.position.z), Quaternion.identity);
             Destroy(this.gameObject);
+            Ending_Manager.Instance.Over_Event();
+            Ending_Manager.Instance.Go_EndScene();
             return;
         }
         int k = App.Instance.pathofRails[numoftrain];
