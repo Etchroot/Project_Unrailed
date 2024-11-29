@@ -70,6 +70,8 @@ public class TrainMove : MonoBehaviour
         if (App.Instance.pathofRails.Count == numoftrain)
         {
             Debug.Log($" waring end of rail");
+            Instantiate(DestroyEffect, new Vector3(transform.position.x, transform.position.y + 5, transform.position.z), Quaternion.identity);
+            Destroy(this.gameObject);
             return;
         }
         int k = App.Instance.pathofRails[numoftrain];

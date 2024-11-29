@@ -1336,7 +1336,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &748067754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5121,7 +5121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7c9afb245eda40d488d793d0ec13c738, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dev: 1
+  dev: 0
   rightnearFarInteractor: {fileID: 0}
   pathofRails: 000000000000000000000000
   isgrabedrail: 0
@@ -5613,6 +5613,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3393600697258277913, guid: 2a83a606f89635a47bd08fc186605a52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3404377116016054766, guid: 2a83a606f89635a47bd08fc186605a52, type: 3}
       propertyPath: sceneViewId
       value: 130
@@ -6040,6 +6044,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 6461372415325248246, guid: 2a83a606f89635a47bd08fc186605a52, type: 3}
+    - {fileID: 4487301492125168931, guid: 2a83a606f89635a47bd08fc186605a52, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2a83a606f89635a47bd08fc186605a52, type: 3}
@@ -6328,6 +6333,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: AudioManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4944981209905136112, guid: 909d6f223022ebc4e8abcb935184140c, type: 3}
+      propertyPath: Train_Boom
+      value: 
+      objectReference: {fileID: 8300000, guid: a48fa4f29a4d340408f510137346d687, type: 3}
     - target: {fileID: 6453626554066147410, guid: 909d6f223022ebc4e8abcb935184140c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.004206
@@ -8408,7 +8417,7 @@ CapsuleCollider:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 4194304
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
