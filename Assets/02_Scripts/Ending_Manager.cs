@@ -72,7 +72,7 @@ public class Ending_Manager : MonoBehaviourPunCallbacks
 
         audio_Source.clip = AudioManager.Instance.Clear;
         audio_Source.Play();
-        StartCoroutine(Destory_Train());
+        //StartCoroutine(Destory_Train());
     }
 
     public void Over_Event()
