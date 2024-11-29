@@ -1148,6 +1148,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5584578786323326433, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6294159799266080347, guid: afe9b9a16d181ca4b867bfbee24e05a7, type: 3}
       propertyPath: EndingCavas
       value: 
@@ -5637,8 +5641,8 @@ MonoBehaviour:
   isgrabedrail: 0
   transpeedf_Dev: 12
   transpeedr_Dev: 0.5
-  transpeedf_test: 1.5
-  transpeedr_test: 1
+  transpeedf_test: 1
+  transpeedr_test: 6
 --- !u!4 &1037487475
 Transform:
   m_ObjectHideFlags: 0
@@ -10149,7 +10153,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Mediator: {fileID: 7564042440467593792}
   m_TransformationPriority: 0
-  m_MoveSpeed: 8
+  m_MoveSpeed: 10
   m_EnableStrafe: 0
   m_EnableFly: 0
   m_UseGravity: 1
