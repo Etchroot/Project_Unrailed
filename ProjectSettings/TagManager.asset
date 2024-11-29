@@ -2,8 +2,21 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Tree
+  - Rock
+  - EMPTY
+  - INSTALL
+  - Lever
+  - Rail
+  - RAIL
+  - Destination
+  - Train
+  - Ending_UI
+  - BLOCK
+  - FxTemporaire
+  - Material
   layers:
   - Default
   - TransparentFX
@@ -25,18 +38,18 @@ TagManager:
   - 
   - 
   - 
+  - Tree
+  - Stone
+  - Train
+  - Rail
+  - Material
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - C2_House
+  - C2_Tree
+  - C2_Rock
+  - C2_Train
+  - C2_Destination
   m_SortingLayers:
   - name: Default
     uniqueID: 0
@@ -50,27 +63,3 @@ TagManager:
   - Light Layer 5
   - Light Layer 6
   - Light Layer 7
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 

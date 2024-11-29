@@ -1,0 +1,125 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2337955080868998308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2052757441642707070}
+  - component: {fileID: 6326411085911656972}
+  - component: {fileID: 6646730510742047006}
+  - component: {fileID: 677826676004673723}
+  - component: {fileID: 4436314649029030049}
+  m_Layer: 0
+  m_Name: Rail_UI_Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2052757441642707070
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337955080868998308}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.159783, y: 14.425206, z: 41.02152}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6326411085911656972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337955080868998308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a150c6acac42fdf49ac2033fafa2d3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  navigateAction: {fileID: -8666952849799569744, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  selectAction: {fileID: -2524354804938687746, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+--- !u!114 &6646730510742047006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337955080868998308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d76798d7ad89f498a907c4c43b1ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ForwardButton: {fileID: 0}
+  LeftButton: {fileID: 0}
+  RightButton: {fileID: 0}
+  TargetText: {fileID: 0}
+--- !u!114 &677826676004673723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337955080868998308}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c847f5a7950e5a34cb717e078f73e8ce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  railbuttons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  railPrefab:
+  - {fileID: 818672354547905127, guid: 854828cb0114b9b4aa0c3fb84b3ceaa7, type: 3}
+  - {fileID: 8818431233968287108, guid: 9af3ad66aa17c264c831e8e73bc38460, type: 3}
+  - {fileID: 8322533814086065417, guid: ea294c65767b13a4f87bee31318adecf, type: 3}
+--- !u!114 &4436314649029030049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337955080868998308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 007e4908e32d1f94286f33fc750a3d10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Controller: {fileID: 0}
+  rayLength: 10
+  triggerAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Trigger
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 5493a880-d956-4193-8f8d-a4204a701518
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 83097790271614945, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  railButtons:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  railPrefabs:
+  - {fileID: 818672354547905127, guid: 854828cb0114b9b4aa0c3fb84b3ceaa7, type: 3}
+  - {fileID: 8818431233968287108, guid: 9af3ad66aa17c264c831e8e73bc38460, type: 3}
+  - {fileID: 8322533814086065417, guid: ea294c65767b13a4f87bee31318adecf, type: 3}
